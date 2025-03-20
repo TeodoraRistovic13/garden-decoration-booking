@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forma za zakazivanje</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <h2 class="logo">Logo</h2>
+    <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto navigation">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/prikaz-profila">Profil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/firme-vlasnik">Firme</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/zakazivanja-vlasnik">Zakazivanja</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/odrzavanje-vlasnik">Odrzavanje</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btnLogin-popup" (click)="izlogujSe()">Izloguj se</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 stepperDiv">
+        <div class="mainContainer">
+          <button class="btn" mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+            {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+          </button>
+          <mat-horizontal-stepper [linear]="isLinear" #stepper (selectionChange)="onStepChange($event)">
+            <mat-step label="Uvod">
+              <mat-card>
+                <mat-card-header>
+                  <mat-card-title> &nbsp; Hvala što ste izabrali <strong>{{ firma.naziv }}</strong> za stvaranje savršenog ambijenta vaše bašte!</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Da bismo vam omogućili što bolju uslugu, potrebno je da kroz nekoliko koraka popunite sledecu formu.</p>
+                  <p>Svaki korak forme je dizajniran tako da vas vodi kroz proces unosa podataka i pruža vam jasne instrukcije. Ako imate bilo kakvih pitanja, slobodno se obratite našem timu za podršku.</p>
+                  <p>Kliknite na dugme "Dalje" da biste započeli proces zakazivanja.</p>
+                  <button mat-button matStepperNext>Dalje</button>
+                </mat-card-content>
+              </mat-card>
+            </mat-step>
+            <mat-step [stepControl]="prviKorakForma">
+              <form [formGroup]="prviKorakForma">
+                <ng-template matStepLabel>Prvi korak</ng-template>
+                <mat-form-field  appearance="fill">
+                  <mat-label>Izaberite datum</mat-label>
+                  <input matInput [matDatepicker]="picker"  [matDatepickerFilter]="godisnjiFilter" formControlName="datum">
+                  <mat-hint>MM/DD/YYYY</mat-hint>
+                  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field  appearance="fill">
+                  <mat-label>Izaberite vreme</mat-label>
+                  <mat-select formControlName="vreme" placeholder="">
+                    <mat-option *ngFor="let time of slobodniTermini" [value]="time">{{ time }}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                  <mat-label>Unesite ukupnu kvadraturu</mat-label>
+                  <input matInput placeholder="" formControlName="povrsina" type="number" required>
+                </mat-form-field>
+                <mat-form-field  appearance="fill">
+                  <mat-label>Tip baste</mat-label>
+                  <mat-select formControlName="tipBaste" placeholder="" (selectionChange)="onSelectionChange($event)" >
+                    <mat-option value="1">Privatna basta</mat-option>
+                    <mat-option value="2">Restoranska basta</mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="prviKorakForma.get('gardenType')?.hasError('required')">
+                    Tip baste je obavezno polje!
+                  </mat-error>
+                </mat-form-field>
+                <div>
+                  <button mat-button matStepperPrevious>Nazad</button>
+                  <button mat-button matStepperNext [disabled]="!validanPrviKorak">Sledeci</button>
+                </div>
+              </form>
+            </mat-step>
+            <mat-step *ngIf="tipBaste=='1'" [stepControl]="formaKucnaBasta">
+              <form [formGroup]="formaKucnaBasta">
+                <ng-template matStepLabel>Drugi korak</ng-template>
+                <mat-form-field appearance="fill">
+                  <mat-label>Kvadratura pod bazenom</mat-label>
+                  <input matInput type="number" formControlName="bazen" placeholder="Unesite kvadraturu pod bazenom">
+                  <mat-error *ngIf="formaKucnaBasta.get('bazen')?.hasError('required')">
+                    Kvadratura pod bazenom je obavezna.
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                  <mat-label>Kvadratura pod zelenilom</mat-label>
+                  <input matInput type="number" formControlName="zelenilo" placeholder="Unesite kvadraturu pod zelenilom">
+                  <mat-error *ngIf="formaKucnaBasta.get('zelenilo')?.hasError('required')">
+                    Kvadratura pod zelenilom je obavezna.
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                  <mat-label>Kvadratura pod ležaljkama i stolovima</mat-label>
+                  <input matInput type="number" formControlName="namestaj" placeholder="Unesite kvadraturu pod ležaljkama i stolovima">
+                  <mat-error *ngIf="formaKucnaBasta.get('namestaj')?.hasError('required')">
+                    Ovo polje je obavezno.
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                  <mat-label>Kratak opis</mat-label>
+                  <textarea matInput formControlName="opis"></textarea>
+                  <mat-error *ngIf="formaKucnaBasta.get('opis')?.hasError('required')">
+                    Kratak opis je obavezan.
+                  </mat-error>
+                </mat-form-field>
+                <div class="usluge">
+                  <label class="naslov">Izaberite bar jednu uslugu*</label>
+                  <div formArrayName="usluge" *ngFor="let usluga of usluge; let i = index;">
+                    <label>
+                      <input type="checkbox" [formControlName]="i" />
+                      {{ usluga.naziv }}
+                    </label>
+                  </div>
+                  <hr>
+                </div>
+                <div>
+                  <button mat-button matStepperPrevious>Nazad</button>
+                  <button mat-button matStepperNext [disabled]="!validanDrugiKorakPriv">Sledeci</button>
+                </div>
+              </form>
+            </mat-step>
+            <mat-step *ngIf="tipBaste=='2'" [stepControl]="formaRestoran">
+              <form [formGroup]="formaRestoran">
+                <ng-template matStepLabel>Drugi korak</ng-template>
+
+                <mat-form-field appearance="fill">
+                  <mat-label>Naziv restorana</mat-label>
+                  <input matInput formControlName="naziv" type="text" min="0">
+                  <span matSuffix>*Opciono</span>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                  <mat-label>Adresa restorana</mat-label>
+                  <input matInput formControlName="adresa" type="text" min="0">
+                  <span matSuffix>*Opciono</span>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                  <mat-label>Kvadratura bašte sa fontanom</mat-label>
+                  <input matInput formControlName="fontana" type="number" min="0">
+                  <mat-error *ngIf="formaRestoran.get('fontana')?.hasError('required')">
+                    Kvadratura bašte sa fontanom je obavezna.
+                  </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                  <mat-label>Kvadratura bašte sa zelenilom</mat-label>
+                  <input matInput formControlName="zelenilo" type="number" min="0">
+                  <mat-error *ngIf="formaRestoran.get('zelenilo')?.hasError('required')">
+                    Kvadratura bašte sa zelenilom je obavezna.
+                  </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                  <mat-label>Broj stolova</mat-label>
+                  <input matInput formControlName="brojStolova" type="number" min="0">
+                  <mat-error *ngIf="formaRestoran.get('brojStolova')?.hasError('required')">
+                    Broj stolova je obavezan.
+                  </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                  <mat-label>Broj stolica</mat-label>
+                  <input matInput formControlName="brojStolica" type="number" min="0">
+                  <mat-error *ngIf="formaRestoran.get('brojStolica')?.hasError('required')">
+                    Broj stolica je obavezan.
+                  </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                  <mat-label>Kratak opis</mat-label>
+                  <textarea matInput formControlName="opis"></textarea>
+                  <mat-error *ngIf="formaRestoran.get('opis')?.hasError('required')">
+                    Kratak opis je obavezan.
+                  </mat-error>
+                </mat-form-field>
+                <!-- treba da se dodaju usluge firme; nz jos dal svaka firma ima neke posebne opcije ili kako videcemo -->
+                <div class="usluge">
+                  <label class="naslov">Izaberite bar jednu uslugu*</label>
+                  <div formArrayName="usluge" *ngFor="let usluga of usluge; let i = index;">
+                    <label>
+                      <input type="checkbox" [formControlName]="i" />
+                      {{ usluga.naziv }}
+                    </label>
+                  </div>
+                  <hr>
+                </div>
+
+
+                <div>
+                  <!-- <div *ngIf="validanDrugiKorakRest && proveraKvadratura()==false" style="margin-left: 10px;"><i>Nije moguce preci na sledeci korak zato sto se kvadrature ne poklapaju.</i></div> -->
+                  <button mat-button matStepperPrevious>Nazad</button>
+                  <button mat-button matStepperNext [disabled]="!validanDrugiKorakRest">Sledeci</button>
+                  <!-- <button mat-button matStepperNext [disabled]="!validanDrugiKorakRest || proveraKvadratura()==false">Sledeci</button> -->
+                </div>
+              </form>
+            </mat-step>
+
+            <!-- raspored baste -->
+            <mat-step>
+              <ng-template matStepLabel>Raspored baste</ng-template>
+              <mat-card>
+                  <div class="container stepFour">
+                    <div class="row">
+                      <div class="col-sm-3 elementiDiv">
+                        <p>Elementi: </p>
+                        <div class="zelenilo">
+                          <button class="elem" (click)="izabraniOblik='zelenilo'">
+                            <img src="../../assets/zelenilo.png" alt="" class="imgElemStilZelenilo">
+                          </button>
+                          <button class="elem" (click)="izabraniOblik='sto'">
+                            <img src="../../assets/sto.png" alt="" class="imgStilSto">
+                          </button>
+                          <button class="elem" (click)="izabraniOblik='fontana'">
+                            <img src="../../assets/fontana.png" alt="" class="imgStilFontana">
+                          </button>
+                        </div>
+                        <div class="bazeni">
+                          <button class="elem" (click)="izabraniOblik='bazenH'">
+                            <img src="../../assets/bazen.png" alt="" class="imgStilBazenH">
+                          </button>
+                          <button class="elem" (click)="izabraniOblik='bazenV'">
+                            <img src="../../assets/bazen.png" alt="" class="imgStilBazenV">
+                          </button>
+                        </div>
+                        <div class="stolice">
+                          <button class="elem" (click)="izabraniOblik='stolicaH'">
+                            <img src="../../assets/stolica.png" alt="" class="imgStilStolicaH">
+                          </button>
+                          <button class="elem" (click)="izabraniOblik='stolicaV'">
+                            <img src="../../assets/stolica.png" alt="" class="imgStilStolicaV">
+                          </button>
+                        </div>
+                        <div class="dugmici">
+                          <button mat-raised-button color="primary" (click)="ocistiKanvas()">Clear</button>
+                          <button mat-raised-button color="primary" (click)="ukloniPoslednjeg()">Undo</button>
+                        </div>
+                      </div>
+                      <div class="col-sm-9">
+                        <div class="canvasContainer">
+                          <canvas id="mojCanvas" class="canvasStyle" (click)="onCanvasClick($event)"></canvas>
+                        </div>
+                      </div>
+                      <hr>
+                    </div>
+                    <div class="row divJsonInput">
+                      <div class="col-sm-10 jsonInput">
+                        <p class="maliTekst">Izaberite .json fajl sa rasporedom baste:</p>
+                        <div class="inputFajlaDiv">
+                          <input type="file" (change)="onFileChange($event)"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+              </mat-card>
+              <div>
+                <button mat-button matStepperPrevious>Nazad</button>
+                <button mat-button matStepperNext [disabled]="elementiBaste.length==0">Sledeci</button>
+              </div>
+            </mat-step>
+
+            <mat-step>
+              <ng-template matStepLabel>Završetak</ng-template>
+              <mat-card>
+                <mat-card-header>
+                  <mat-card-title>&nbsp; Završili ste!</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>Hvala što ste popunili formular. Vaši podaci su uspešno sačuvani.</p>
+                  <p>Možete završiti proces klikom na dugme 'Zavrsi' ispod.</p>
+                </mat-card-content>
+              </mat-card>
+              <div>
+                <button mat-button matStepperPrevious>Nazad</button>
+                <button mat-button (click)="stepper.reset()">Resetuj</button>
+                <button mat-button (click)="proveraDaMoguceZakazivanje()">Zavrsi</button>
+              </div>
+            </mat-step>
+          </mat-horizontal-stepper>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+</body>
+</html>

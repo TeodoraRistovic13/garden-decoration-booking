@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firme</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <h2 class="logo">Logo</h2>
+    <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto navigation">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/prikaz-profila">Profil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/firme-vlasnik">Firme</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/zakazivanja-vlasnik">Zakazivanja</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/odrzavanje-vlasnik">Odrzavanje</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btnLogin-popup" (click)="izlogujSe()">Izloguj se</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mainContainer">
+
+    <div class="row mt-2 mb-2 searchRow">
+      <div class="col firme">
+        <h4>Firme</h4>
+      </div>
+    </div>
+
+    <div class="row mb-2 search-fields">
+      <div class="col-md-5 text-center pretragaImeDiv">
+        <input type="text" class="form-control form-control-lg" placeholder="Pretraga po imenu" [(ngModel)]="pretragaIme">
+      </div>
+      <div class="col-md-5 text-center pretragaAdresaDiv">
+        <input type="text" class="form-control form-control-lg" placeholder="Pretraga po adresi" [(ngModel)]="pretragaAdresa">
+      </div>
+      <div class="col-md-2 text-center pretragaDugme">
+        <button class="btn btn-md" (click)="pretraziFirme()">Pretraži</button>
+        <button *ngIf="filterAktivan==true" class="btn btn-md2" type="button" (click)="ponistiFiltere()">Ponisti</button>
+      </div>
+    </div>
+
+    <div class="row pocetnaDrugiRed">
+
+      <div class="col-sm-12 table-responsive" *ngIf="filterAktivan==false">
+        <table class="table table-sortable" *ngIf="firme.length!=0">
+          <thead>
+            <tr>
+              <th>
+                <div class="sort-buttons">
+                  <div class="headerTabele">Naziv</div>
+                  <button class="btn btn-sm btn-light" (click)="sortirajFirme('naziv', 'asc', firme)"><i class='bx bx-up-arrow-alt'></i></button>
+                  <button class="btn btn-sm btn-light" (click)="sortirajFirme('naziv', 'desc', firme)"><i class='bx bx-down-arrow-alt'></i></button>
+                </div>
+              </th>
+              <th>
+                <div class="sort-buttons">
+                  <div class="headerTabele">Adresa</div>
+                  <button class="btn btn-sm btn-light" (click)="sortirajFirme('adresa', 'asc', firme)"><i class='bx bx-up-arrow-alt'></i></button>
+                  <button class="btn btn-sm btn-light" (click)="sortirajFirme('adresa', 'desc', firme)"><i class='bx bx-down-arrow-alt'></i></button>
+                </div>
+              </th>
+              <th>Dekorateri</th>
+              <th>Ocena</th>
+              <th>Zvezdice</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let firma of this.firme">
+              <td><a class="custom-link text-center" (click)="detaljiFirme(firma)">{{ firma.naziv }}</a></td>
+              <td class="text-center">{{ firma.adresa }}</td>
+              <td class="listaDekoratera">
+                <ul>
+                  <li *ngFor="let dekorater of dohvDekoratereZaFirmu(firma.id)">{{ dekorater.ime }} {{ dekorater.prezime }}</li>
+                </ul>
+              </td>
+              <td>{{firma.prosecna_ocena | number:'1.2-2'}}</td>
+              <td *ngIf="firma.prosecna_ocena != 0">
+                <ng-container *ngFor="let _ of [].constructor(donjiCeoDeo(firma.prosecna_ocena)); let i = index">
+                  <i class="fa fa-star" style="color: #FFD43B;"></i>
+                </ng-container>
+                <ng-container *ngIf="firma.prosecna_ocena % 1 >= 0.5">
+                  <i class="fa fa-star-half-alt" style="color: #FFD43B;"></i>
+                </ng-container>
+              </td>
+              <td *ngIf="firma.prosecna_ocena==0"><i>Nije ocenjena</i></td>
+            </tr>
+          </tbody>
+        </table>
+        <div *ngIf="firme.length==0" class="text-center">
+          Nema dostupnih firmi!
+        </div>
+      </div>
+      <div class="col-sm-12" *ngIf="filterAktivan==true">
+        <table class="table table-sortable" *ngIf="filtriraneFirme.length!=0">
+          <thead>
+            <tr>
+              <th>
+                <div class="sort-buttons">
+                  <div class="headerTabele">Naziv</div>
+                  <button class="btn btn-sm btn-light" (click)="sortirajFirme('naziv', 'asc', filtriraneFirme)"><i class='bx bx-up-arrow-alt'></i></button>
+                  <button class="btn btn-sm btn-light" (click)="sortirajFirme('naziv', 'desc', filtriraneFirme)"><i class='bx bx-down-arrow-alt'></i></button>
+                </div>
+              </th>
+              <th>
+                <div class="sort-buttons">
+                  <div class="headerTabele">Adresa</div>
+                  <button class="btn btn-sm btn-light" (click)="sortirajFirme('adresa', 'asc', filtriraneFirme)"><i class='bx bx-up-arrow-alt'></i></button>
+                  <button class="btn btn-sm btn-light" (click)="sortirajFirme('adresa', 'desc', filtriraneFirme)"><i class='bx bx-down-arrow-alt'></i></button>
+                </div>
+              </th>
+              <th>Dekorateri</th>
+              <th>Ocena</th>
+              <th>Zvezdice</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let firma of this.filtriraneFirme">
+              <td class="text-center"><a class="custom-link text-center" (click)="detaljiFirme(firma)">{{ firma.naziv }}</a></td>
+              <td class="text-center">{{ firma.adresa }}</td>
+              <td class="listaDekoratera">
+                <ul>
+                  <li *ngFor="let dekorater of dohvDekoratereZaFirmu(firma.id)">{{ dekorater.ime }} {{ dekorater.prezime }}</li>
+                </ul>
+              </td>
+              <td>{{firma.prosecna_ocena | number:'1.2-2'}}</td>
+              <td *ngIf="firma.prosecna_ocena != 0">
+                <ng-container *ngFor="let _ of [].constructor(donjiCeoDeo(firma.prosecna_ocena)); let i = index">
+                  <i class="fa fa-star" style="color: #FFD43B;"></i>
+                </ng-container>
+                <ng-container *ngIf="firma.prosecna_ocena % 1 >= 0.5">
+                  <i class="fa fa-star-half-alt" style="color: #FFD43B;"></i>
+                </ng-container>
+              </td>
+              <td *ngIf="firma.prosecna_ocena==0"><i>Nije ocenjena</i></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="text-center" *ngIf="filtriraneFirme.length == 0">
+          Nije pronadjena nijedna firma!
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

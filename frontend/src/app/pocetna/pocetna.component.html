@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Početna</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <h2 class="logo">Logo</h2>
+    <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto navigation">
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btnLogin-popup" routerLink="/login">Uloguj se</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mainContainer">
+    <div class="row pocetnaPrviRed">
+      <div class="col-lg-6">
+        <div id="carouselExampleIndicators" class="carousel slide pocetnaInfo">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="d-block w-100 carousel-text">
+                <h1>Dobrodošli!</h1>
+                <p>Prikazujemo vam najnovije informacije i podatke o našem sistemu.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-block w-100 carousel-text">
+                <h5>Ukupan broj dekorisanih bašta</h5>
+                <p>{{uk_broj_dekorisanih_basta}}</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-block w-100 carousel-text">
+                <h5>Ukupan broj registrovanih vlasnika</h5>
+                <p>{{uk_broj_vlasnika}}</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-block w-100 carousel-text">
+                <h5>Ukupan broj registrovanih dekoratera</h5>
+                <p>{{uk_broj_dekoratera}}</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-block w-100 carousel-text">
+                <h5>Broj zakazanih poslova</h5>
+                <p>Poslednja 24 sata : {{broj24Sata}} </p>
+                <p>Poslednjih 7 dana : {{broj7Dana}} </p>
+                <p>Poslednjih 30 dana: {{broj30Dana}} </p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-6 kolonaGalerija slika">
+        <div id="carouselExampleCaptions" class="carousel slide galerijaSlika" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../../assets/pocetna galerija slika 1.jpg" class="d-block w-100" alt="1">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Galerija slika</h5>
+                <p>Radovi dizajnera u nasim firmama</p>
+              </div>
+            </div>
+            <div class="carousel-item" *ngIf="zakazivanjaSlike.length < 3">
+              <img src="../../assets/pocetna galerija slika 2.jpg" class="d-block w-100" alt="2">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Firma 1</h5>
+                <p>Restoran Gros - Svetozara Miletica, Leskovac</p>
+              </div>
+            </div>
+            <div class="carousel-item" *ngIf="zakazivanjaSlike.length < 3">
+              <img src="../../assets/pocetna galerija slika 3.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Firma 2</h5>
+                <p>The View Rooftop - Internacionalnih brigada 9, Beograd</p>
+              </div>
+            </div>
+            <div class="carousel-item" *ngFor="let z of zakazivanjaSlike">
+              <img [src]="slikaUrl + z.slika" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>{{z.firma_naziv}}</h5>
+                <p *ngIf="z.tip_baste=='1'">Privatna bašta na zahtev korisnika</p>
+                <p *ngIf="z.tip_baste=='2'&& (z.naziv_restorana.length==0 || z.adresa_restorana.length==0)">Restoranska bašta na zahtev korisnika</p>
+                <p *ngIf="z.tip_baste=='2'&& z.naziv_restorana.length != 0 && z.adresa_restorana.length != 0">{{z.naziv_restorana}} - {{z.adresa_restorana}}</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-2 mb-2 searchRow">
+      <div class="col firme">
+        <h4>Firme</h4>
+      </div>
+    </div>
+    <div class="row mb-2 search-fields">
+      <div class="col-md-5 text-center pretragaImeDiv">
+        <input type="text" class="form-control form-control-lg" placeholder="Pretraga po imenu" [(ngModel)]="pretragaIme">
+      </div>
+      <div class="col-md-5 text-center pretragaAdresaDiv">
+        <input type="text" class="form-control form-control-lg" placeholder="Pretraga po adresi" [(ngModel)]="pretragaAdresa">
+      </div>
+      <div class="col-md-2 text-center pretragaDugme">
+        <button class="btn btn-md" (click)="pretraziFirme()">Pretraži</button>
+        <button *ngIf="filterAktivan==true" class="btn btn-md2" type="button" (click)="ponistiFiltere()">Ponisti</button>
+      </div>
+    </div>
+    <div class="row pocetnaDrugiRed">
+      <div class="col-sm-12 table-responsive" *ngIf="filterAktivan==false">
+        <table class="table table-sortable" *ngIf="firme.length!=0">
+          <thead>
+            <tr>
+              <th>
+                <div class="sort-buttons">
+                  <div class="headerTabele">Naziv</div>
+                  <button class="btn btn-sm btn-light" (click)="sortirajFirme('naziv', 'asc', firme)"><i class='bx bx-up-arrow-alt'></i></button>
+                  <button class="btn btn-sm btn-light" (click)="sortirajFirme('naziv', 'desc', firme)"><i class='bx bx-down-arrow-alt'></i></button>
+                </div>
+              </th>
+              <th>
+                <div class="sort-buttons">
+                  <div class="headerTabele">Adresa</div>
+                  <button class="btn btn-sm btn-light" (click)="sortirajFirme('adresa', 'asc', firme)"><i class='bx bx-up-arrow-alt'></i></button>
+                  <button class="btn btn-sm btn-light" (click)="sortirajFirme('adresa', 'desc', firme)"><i class='bx bx-down-arrow-alt'></i></button>
+                </div>
+              </th>
+              <th>Dekorateri</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let firma of this.firme">
+              <td class="text-center">{{ firma.naziv }}</td>
+              <td class="text-center">{{ firma.adresa }}</td>
+              <td class="listaDekoratera">
+                <ul>
+                  <li *ngFor="let dekorater of dohvDekoratereZaFirmu(firma.id)">{{ dekorater.ime }} {{ dekorater.prezime }}</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div *ngIf="firme.length==0" class="text-center">
+          Nema dostupnih firmi!
+        </div>
+      </div>
+      <div class="col" *ngIf="filterAktivan==true">
+        <table class="table table-sortable" *ngIf="filtriraneFirme.length!=0">
+          <thead>
+            <tr>
+              <th>
+                <div class="sort-buttons">
+                  <div class="headerTabele">Naziv</div>
+                  <button class="btn btn-sm btn-light" (click)="sortirajFirme('naziv', 'asc', filtriraneFirme)"><i class='bx bx-up-arrow-alt'></i></button>
+                  <button class="btn btn-sm btn-light" (click)="sortirajFirme('naziv', 'desc', filtriraneFirme)"><i class='bx bx-down-arrow-alt'></i></button>
+                </div>
+              </th>
+              <th>
+                <div class="sort-buttons">
+                  <div class="headerTabele">Adresa</div>
+                  <button class="btn btn-sm btn-light" (click)="sortirajFirme('adresa', 'asc', filtriraneFirme)"><i class='bx bx-up-arrow-alt'></i></button>
+                  <button class="btn btn-sm btn-light" (click)="sortirajFirme('adresa', 'desc', filtriraneFirme)"><i class='bx bx-down-arrow-alt'></i></button>
+                </div>
+              </th>
+              <th>Dekorateri</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let firma of this.filtriraneFirme">
+              <td class="text-center">{{ firma.naziv }}</td>
+              <td class="text-center">{{ firma.adresa }}</td>
+              <td class="listaDekoratera">
+                <ul>
+                  <li *ngFor="let dekorater of dohvDekoratereZaFirmu(firma.id)">{{ dekorater.ime }} {{ dekorater.prezime }}</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="text-center" *ngIf="filtriraneFirme.length == 0">
+          Nije pronadjena nijedna firma!
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

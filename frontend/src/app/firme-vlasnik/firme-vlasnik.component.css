@@ -1,0 +1,210 @@
+/*---------------------- stil za navigaciju ------------------*/
+
+body {
+  min-height: 100vh;
+  background: url('../../assets/2Nadezda-Petrovic-kosovski-bozuri-Gracanica-1913..jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar {
+  padding: 20px 100px;
+}
+
+.logo {
+  font-size: 2em;
+  color: #fff;
+  user-select: none;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.navigation a {
+  position: relative;
+  font-size: 1.1em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+.navigation a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .5s;
+}
+
+.navigation a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.nav-item{
+  margin-bottom: 15px;
+  max-width: 200px;
+}
+
+.btnLogin-popup {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight : 500;
+  margin-left: 40px;
+  transition : .5s;
+}
+
+.btnLogin-popup:hover {
+  background: rgba(255,255,255,.2);
+  /* background: #fff; */
+  color: #162938;
+}
+
+.container {
+
+  background-color: rgba(255, 255, 255, .2);
+  backdrop-filter: blur(20px);
+  color: #fff;
+  border-radius: 10px;
+  height: auto;
+  margin-top: 10px;
+  padding-bottom: 15px;
+}
+
+/*------------ stil za tabelarni prikaz firmi ------------------------ */
+
+.firme {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+.table-sortable th {
+  cursor: pointer;
+}
+
+.table-sortable{
+  background:transparent;
+
+}
+
+table {
+  /* background-color: rgba(255, 255, 255, 0.5); Poluprovidna bela pozadina */
+  background-color: transparent;
+  border-collapse: collapse; /* Uklanja duple linije na spojevima */
+}
+.table th, .table td {
+  /* background-color: rgba(255, 255, 255, 0.3); Još providnija bela pozadina za ćelije */
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+
+}
+
+.table td {
+  font-size: 0.8em;
+}
+
+.headerTabele {
+  margin-left: 1em;
+  flex-grow: 1;
+}
+.sort-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.sort-buttons button {
+  margin-left: 5px;
+  background-color: transparent;
+}
+
+/*---------------- pretrazivanje----------------- */
+
+.searchRow {
+  margin-top: 20px
+}
+.search-fields {
+  padding: 10px;
+
+}
+
+.search-fields .form-control {
+  /* border-color: #007bff; */
+  /* box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); */
+  font-size: small;
+}
+
+.search-fields .form-control::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.search-fields input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline : none;
+  border: 2px solid rgba(255,255,255,.2);
+  border-radius : 20px;
+  font-size : 16px;
+  color: #fff;
+  padding: 10px 10px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+.pretragaImeDiv, .pretragaAdresaDiv {
+  margin-bottom: 10px;
+}
+
+
+.btn-md {
+  padding: .5rem 1rem;
+  font-size: 12px;
+  background-color: rgba(255,255,255,.2);
+  border: 2px solid #fff;
+}
+.btn-md2 {
+
+  padding: .5rem 1rem;
+  font-size: 12px;
+  background-color: rgba(255,255,255,.2);
+  border: 2px solid rgba(38, 27, 27, 0.6); /* Poluprovidna crna pozadina */
+
+}
+
+.custom-link {
+  color: #fff;
+}
+
+.custom-link:hover {
+  color: rgba(0, 0, 0, 0.6); /* Boja teksta prilikom prelaska mišem preko linka */
+  cursor: pointer;
+}
+
+.listaDekoratera ul {
+  margin-bottom: 5px;
+
+}

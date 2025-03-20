@@ -1,0 +1,188 @@
+/*---------------------- stil za navigaciju ------------------*/
+
+body {
+  min-height: 100vh;
+  background: url('../../assets/2Nadezda-Petrovic-kosovski-bozuri-Gracanica-1913..jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar {
+  padding: 20px 100px;
+}
+
+.logo {
+  font-size: 2em;
+  color: #fff;
+  user-select: none;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.navigation a {
+  position: relative;
+  font-size: 1.1em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+.navigation a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .5s;
+}
+
+.navigation a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+
+.btnLogin-popup {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight : 500;
+  margin-left: 40px;
+  transition : .5s;
+}
+
+.btnLogin-popup:hover {
+  background: rgba(255,255,255,.2);
+  color: #162938;
+}
+
+.mainContainer {
+
+  background-color: rgba(255, 255, 255, .2);
+  backdrop-filter: blur(20px);
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px 20px;
+  margin-top: 10px;
+  border: 2px solid rgba(255, 255, 255, .2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  max-width : 1000px
+
+}
+
+.btn-md {
+  padding: .5rem 1rem;
+  font-size: 12px;
+  background-color: rgba(255,255,255,.2);
+  border: 1px solid #fff;
+  min-width: 75px;
+
+}
+
+
+.accept{
+  margin-right: 2px;
+}
+
+/* ---------------- stil za info ------------------ */
+
+.services-container {
+  padding: 20px;
+  padding-top: 10px;
+  border-radius: 10px;
+  /* max-width: 70%; */
+  /* margin: 0 auto; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/*----------------------- tabela --------------------*/
+table {
+  /* background-color: rgba(255, 255, 255, 0.5); Poluprovidna bela pozadina */
+  background-color: transparent;
+  border-collapse: collapse; /* Uklanja duple linije na spojevima */
+  /* border: 2px solid #fff;
+  border-radius: 40px; */
+  box-shadow: rgba(255,255,255,.2);
+  min-width: 650px;
+
+}
+.table th, .table td {
+  /* background-color: rgba(255, 255, 255, 0.3); Još providnija bela pozadina za ćelije */
+  background-color: transparent;
+  /* border: 1px solid #fff; */
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+
+}
+
+
+
+.table th {
+  font-size: 14px;
+}
+
+.table td {
+  font-size: 12px;
+}
+
+
+.naslov {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.headerTabele {
+  margin-left: 1em;
+  flex-grow: 1;
+}
+
+.datum{
+  border: 1px solid #fff;
+  border-radius: 40px;
+}
+
+.datum input {
+  width: 80%;
+  height: 100%;
+  background: transparent;
+  font-size: 12px;
+  border: none;
+  outline: none;
+
+  padding: 5px 2px 5px 5px;
+  color: #fff;
+}
+
+
+.poruka {
+  font-size: 12px;
+}
+.rok i {
+  margin-left: 5px;
+}
+

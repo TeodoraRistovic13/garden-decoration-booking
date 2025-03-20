@@ -1,0 +1,436 @@
+/*---------------------- stil za navigaciju ------------------*/
+
+body {
+  min-height: 110vh;
+  background: url('../../assets/2Nadezda-Petrovic-kosovski-bozuri-Gracanica-1913..jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* margin: 0px;
+  padding : 0px; */
+}
+
+.navbar {
+  padding: 20px 100px;
+}
+
+.logo {
+  font-size: 2em;
+  color: #fff;
+  user-select: none;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.navigation a {
+  position: relative;
+  font-size: 1.1em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+.navigation a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .5s;
+}
+
+.navigation a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.nav-item{
+  margin-bottom: 15px;
+  max-width: 200px;
+}
+
+.btnLogin-popup {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight : 500;
+  margin-left: 40px;
+  transition : .5s;
+}
+
+.btnLogin-popup:hover {
+  background: rgba(255,255,255,.2);
+  /* background: #fff; */
+  color: #162938;
+}
+
+/* Stilovi za kontejner forme */
+.mainContainer {
+  max-width: 800px;
+  margin: 20px auto;
+  margin-top: 10px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, .2);
+  backdrop-filter: blur(20px);
+  color: #fff;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, .2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #fff;;
+}
+
+.otherContainer {
+  max-width: 800px;
+  margin: 20px auto;
+  margin-top: 10px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, .2);
+  backdrop-filter: blur(20px);
+  color: #fff;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, .2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #fff;;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 22px;
+  height: 300px;
+
+}
+
+/* Stilovi za naslove */
+h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+}
+
+h3 {
+  color:#fff;
+}
+
+/* Stilovi za formu i sekcije */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.service {
+  margin-bottom: 10px;
+  padding: 5px;
+  /* background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;*/
+}
+
+.service input{
+  margin-bottom: 10px;
+}
+
+/* Stilizovanje dugmeta za dodavanje usluga */
+#addServiceBtn {
+  background-color: #28a745;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#addServiceBtn:hover {
+  background-color: #218838;
+}
+
+.godisnjiOdmor {
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline : none;
+  border: 2px solid rgba(255,255,255,.2);
+  border-radius : 20px;
+  font-size : 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+  color: #fff;
+}
+
+.input-box textarea{
+
+  width: 100%;
+  height: 100px;
+  background: transparent;
+  border: none;
+  outline : none;
+  border: 2px solid rgba(255,255,255,.2);
+  border-radius : 20px;
+  font-size : 14px;
+  color: #fff;
+  padding: 8px;
+  margin-bottom: 10px;
+  resize: vertical;
+  padding: 20px 20px;
+}
+
+.input-box{
+  position: relative;
+}
+
+.input-box label, .date-box label {
+  position:relative;
+  left: 4%;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+.dugmici{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+
+}
+
+.btn{
+  width: max-content;
+  height: 40px;
+  background: #fff;
+  border: none;
+  outline: none;
+  /* border-radius: 30px; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.date-box{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.datum input{
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline : none;
+  border: 2px solid rgba(255,255,255,.2);
+  border-radius : 20px;
+  font-size : 16px;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.datum{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 5px 5px;
+}
+
+
+.dugmeUsluga{
+  background: #fff;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #333;
+  width: 100%;
+  margin-top: 10px;
+  max-width: 200px;
+}
+
+.dugmeDiv{
+  display: flex;
+  justify-content: center;
+}
+
+.section h5{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.usluge p{
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.nemaUsluga p {
+  margin-top: 30px;
+}
+
+.btn-md {
+  padding: .5rem 1rem;
+  font-size: 12px;
+  background-color: rgba(255,255,255,.2);
+  border: 1px solid #fff;
+  min-width: 150px;
+  color : #ffff;
+  border-radius: 20px;
+
+}
+
+
+table {
+  /* background-color: rgba(255, 255, 255, 0.5); Poluprovidna bela pozadina */
+  background-color: transparent;
+  border-collapse: collapse; /* Uklanja duple linije na spojevima */
+  /* border: 2px solid #fff;
+  border-radius: 40px; */
+  box-shadow: rgba(255,255,255,.2);
+
+
+}
+.table th, .table td {
+  /* background-color: rgba(255, 255, 255, 0.3); Još providnija bela pozadina za ćelije */
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table th {
+  font-size: 10px;
+  text-align: center;
+}
+
+.table td {
+  font-size: 10px;
+}
+
+select {
+  width: 100%;
+  height: max-content;
+  min-height: 350px;
+  background: transparent;
+  background-color: rgba(255,255,255,.2);
+  border: 1px solid #fff;
+  border-radius: 20px;
+  color: #fff;
+  padding: 10px 10px;
+
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+}
+
+
+
+select[multiple] {
+  overflow: auto; /* Omogućava skrolovanje */
+  -ms-overflow-style: none; /* Sakriva skrol bar u Internet Exploreru i Edge-u */
+  scrollbar-width: none; /* Sakriva skrol bar u Firefoxu */
+}
+
+select[multiple]::-webkit-scrollbar {
+  width: 0; /* Sakriva skrol bar u WebKit baziranim browserima kao što su Chrome i Safari */
+  background: transparent; /* Sakriva pozadinu skrol bara */
+}
+
+
+.dekorater{
+  display: flex;
+  flex-direction: column;
+  margin: 5px 10px;
+}
+
+
+.dekorater {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Razmak između checkboxova */
+}
+
+.custom-checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  padding: 5px;
+}
+
+.custom-checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  accent-color: #007bff; /* Za moderne browsere */
+  cursor: pointer;
+}
+
+/* Stilizacija checkboxa kada je izabran */
+.custom-checkbox:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* Stilizacija checkboxa kada je fokusiran */
+.custom-checkbox:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Stilizacija teksta (label) kada je checkbox fokusiran */
+.custom-checkbox-label:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+  border-radius: 5px;
+}
+.info{
+  color: #ffff;
+}
+
+.poruka {
+  margin-top: 10px;
+}
+
+.poruka p{
+  margin-bottom: 2px;
+}
+
+.radno-vreme-box{
+  display: flex;
+}

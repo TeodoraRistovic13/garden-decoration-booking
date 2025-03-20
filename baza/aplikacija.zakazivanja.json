@@ -1,0 +1,2712 @@
+[{
+  "_id": {
+    "$oid": "66d095bf44ce490291b48dd7"
+  },
+  "id": 1,
+  "kor_ime_vlasnika": "ristovic_tea",
+  "firma_naziv": "Tea'SDesigns",
+  "kor_ime_dekoratera": "zoki",
+  "datum_zakazivanja": {
+    "$date": "2024-08-25T15:37:35.214Z"
+  },
+  "datum_izrade": {
+    "$date": "2024-08-26T12:00:00.000Z"
+  },
+  "datum_zavrsetka": {
+    "$date": "2024-08-27T21:28:41.982Z"
+  },
+  "datum_odrzavanja": {
+    "$date": "2024-09-03T16:10:00.000Z"
+  },
+  "uk_povrsina": 50,
+  "tip_baste": "1",
+  "naziv_restorana": "",
+  "adresa_restorana": "",
+  "uk_bazen": 5,
+  "uk_namestaj": 20,
+  "uk_fontana": 0,
+  "br_stolova": 0,
+  "br_stolica": 0,
+  "uk_zelenilo": 25,
+  "kratak_opis": "Dodajte i kamenu stazu kroz zelenilo do kuce",
+  "usluge": [
+    {
+      "naziv": "Dekorisanje privatnih basta",
+      "opis": "Dekorisemo privatne baste po dogvoru sa Vama.",
+      "cena": "5000"
+    }
+  ],
+  "recenzija": {
+    "komentar": "Sjajan posao! Prezadovoljna!",
+    "ocena": 5,
+    "kor_ime": "ristovic_tea",
+    "datum_vreme": "2024-08-29T22:36:02.985Z"
+  },
+  "status": "zavrseno",
+  "slika": "basta_sa_bazenom_1.jpg",
+  "odrzavanoBarJednom": true,
+  "raspored_baste": [
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 5,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 40,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 75,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 110,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 145,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 180,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 40,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 75,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 110,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 145,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 180,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 215,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 250,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 285,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 5,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 40,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 75,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 110,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 145,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 180,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "bazen",
+      "x": 45,
+      "y": 115,
+      "width": 265,
+      "height": 90
+    },
+    {
+      "type": "lezaljka",
+      "x": 55,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "lezaljka",
+      "x": 110,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "sto",
+      "x": 95,
+      "y": 60,
+      "radius": 10
+    },
+    {
+      "type": "lezaljka",
+      "x": 220,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "lezaljka",
+      "x": 275,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "sto",
+      "x": 260,
+      "y": 60,
+      "radius": 10
+    }
+  ],
+  "broj_vodenih_povrsina": 1,
+  "komentar_odbijenica": ""
+},
+{
+  "_id": {
+    "$oid": "66d0967644ce490291b48de0"
+  },
+  "id": 2,
+  "kor_ime_vlasnika": "ristovic_tea",
+  "firma_naziv": "Tea'SDesigns",
+  "kor_ime_dekoratera": "zoki",
+  "datum_zakazivanja": {
+    "$date": "2024-08-14T15:40:38.476Z"
+  },
+  "datum_izrade": {
+    "$date": "2024-08-16T14:00:00.000Z"
+  },
+  "datum_zavrsetka": {
+    "$date": "2024-08-18T21:29:10.080Z"
+  },
+  "datum_odrzavanja": {
+    "$date": "2024-09-05T06:00:00.000Z"
+  },
+  "uk_povrsina": 200,
+  "tip_baste": "2",
+  "naziv_restorana": ":jubav",
+  "adresa_restorana": "Krunska 13, Beograd",
+  "uk_bazen": 0,
+  "uk_namestaj": 0,
+  "uk_fontana": 5,
+  "br_stolova": 10,
+  "br_stolica": 30,
+  "uk_zelenilo": 100,
+  "kratak_opis": "Dodajte svetlece lampice kao ukrase u basti.",
+  "usluge": [
+    {
+      "naziv": "Dekorisanje restoranski basta",
+      "opis": "Dekorisemo restoranske baste po dogvoru sa Vama.",
+      "cena": "8000"
+    }
+  ],
+  "recenzija": {
+    "komentar": "Odlican posao!",
+    "ocena": 4,
+    "kor_ime": "ristovic_tea",
+    "datum_vreme": "2024-08-29T22:32:32.506Z"
+  },
+  "status": "zavrseno",
+  "slika": "romansa_1.jpg",
+  "odrzavanoBarJednom": true,
+  "raspored_baste": [
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 5,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 40,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 75,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 110,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 145,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 180,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 40,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 75,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 110,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 145,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 180,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 215,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 250,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 285,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 5,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 40,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 75,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 110,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 145,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 180,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "bazen",
+      "x": 45,
+      "y": 115,
+      "width": 265,
+      "height": 90
+    },
+    {
+      "type": "lezaljka",
+      "x": 55,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "lezaljka",
+      "x": 110,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "sto",
+      "x": 95,
+      "y": 60,
+      "radius": 10
+    },
+    {
+      "type": "lezaljka",
+      "x": 220,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "lezaljka",
+      "x": 275,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "sto",
+      "x": 260,
+      "y": 60,
+      "radius": 10
+    }
+  ],
+  "broj_vodenih_povrsina": 1,
+  "komentar_odbijenica": ""
+},
+{
+  "_id": {
+    "$oid": "66d0f8cfb2b2dedddaf32060"
+  },
+  "id": 3,
+  "kor_ime_vlasnika": "maja",
+  "firma_naziv": "Tea'SDesigns",
+  "kor_ime_dekoratera": "erni",
+  "datum_zakazivanja": {
+    "$date": "2024-08-29T22:40:15.599Z"
+  },
+  "datum_izrade": {
+    "$date": "2024-08-15T09:00:00.000Z"
+  },
+  "datum_zavrsetka": {
+    "$date": "2024-08-29T22:38:55.549Z"
+  },
+  "datum_odrzavanja": {
+    "$date": "2024-08-29T22:38:55.549Z"
+  },
+  "uk_povrsina": 40,
+  "tip_baste": "1",
+  "naziv_restorana": "",
+  "adresa_restorana": "",
+  "uk_bazen": 4,
+  "uk_namestaj": 10,
+  "uk_fontana": 0,
+  "br_stolova": 0,
+  "br_stolica": 0,
+  "uk_zelenilo": 20,
+  "kratak_opis": "Zelim da basta bude ogradjena belom drvenom ogradom.",
+  "usluge": [
+    {
+      "naziv": "Dekorisanje privatnih basta",
+      "opis": "Dekorisemo privatne baste po dogvoru sa Vama.",
+      "cena": "5000"
+    }
+  ],
+  "recenzija": {
+    "komentar": "Zadovoljna!",
+    "ocena": 4,
+    "kor_ime": "maja",
+    "datum_vreme": "2024-08-29T22:45:29.443Z"
+  },
+  "status": "zavrseno",
+  "slika": "basta stolice.png",
+  "odrzavanoBarJednom": false,
+  "raspored_baste": [
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 5,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 40,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 75,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 110,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 145,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 180,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 40,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 75,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 110,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 145,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 180,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 215,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 250,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 285,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 5,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 40,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 75,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 110,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 145,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 180,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "bazen",
+      "x": 45,
+      "y": 115,
+      "width": 265,
+      "height": 90
+    },
+    {
+      "type": "lezaljka",
+      "x": 55,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "lezaljka",
+      "x": 110,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "sto",
+      "x": 95,
+      "y": 60,
+      "radius": 10
+    },
+    {
+      "type": "lezaljka",
+      "x": 220,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "lezaljka",
+      "x": 275,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "sto",
+      "x": 260,
+      "y": 60,
+      "radius": 10
+    }
+  ],
+  "broj_vodenih_povrsina": 1,
+  "komentar_odbijenica": ""
+},
+{
+  "_id": {
+    "$oid": "66d0fb4ab2b2dedddaf320aa"
+  },
+  "id": 4,
+  "kor_ime_vlasnika": "ristovic_tea",
+  "firma_naziv": "EleganceGardens",
+  "kor_ime_dekoratera": "sara",
+  "datum_zakazivanja": {
+    "$date": "2024-08-29T22:50:50.201Z"
+  },
+  "datum_izrade": {
+    "$date": "2024-08-31T10:00:00.000Z"
+  },
+  "datum_zavrsetka": {
+    "$date": "2024-09-02T11:39:37.564Z"
+  },
+  "datum_odrzavanja": {
+    "$date": "2024-08-29T22:50:00.201Z"
+  },
+  "uk_povrsina": 50,
+  "tip_baste": "1",
+  "naziv_restorana": "",
+  "adresa_restorana": "",
+  "uk_bazen": 10,
+  "uk_namestaj": 10,
+  "uk_fontana": 0,
+  "br_stolova": 0,
+  "br_stolica": 0,
+  "uk_zelenilo": 20,
+  "kratak_opis": "Treba mi da se malo uredi basta pred jesen.",
+  "usluge": [
+    {
+      "naziv": "Sezonsko uređenje privatnih bašta",
+      "opis": "Sezonsko uređenje i dekoracija privatnih bašta u skladu sa vašim preferencijama.",
+      "cena": "7200"
+    }
+  ],
+  "recenzija": {
+    "komentar": "Skuplja varijanta, ali sve vrhunski!",
+    "ocena": 4,
+    "kor_ime": "ristovic_tea",
+    "datum_vreme": "2024-09-05T09:45:41.966Z"
+  },
+  "status": "majstor",
+  "slika": "basta_sa_bazenom_5.jpg",
+  "odrzavanoBarJednom": false,
+  "raspored_baste": [
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 5,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 40,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 75,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 110,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 145,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 180,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 40,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 75,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 110,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 145,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 180,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 215,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 250,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 285,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 5,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 40,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 75,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 110,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 145,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 180,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "bazen",
+      "x": 45,
+      "y": 115,
+      "width": 265,
+      "height": 90
+    },
+    {
+      "type": "lezaljka",
+      "x": 55,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "lezaljka",
+      "x": 110,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "sto",
+      "x": 95,
+      "y": 60,
+      "radius": 10
+    },
+    {
+      "type": "lezaljka",
+      "x": 220,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "lezaljka",
+      "x": 275,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "sto",
+      "x": 260,
+      "y": 60,
+      "radius": 10
+    }
+  ],
+  "broj_vodenih_povrsina": 1,
+  "komentar_odbijenica": ""
+},
+{
+  "_id": {
+    "$oid": "66d0ff34b2b2dedddaf320de"
+  },
+  "id": 5,
+  "kor_ime_vlasnika": "maja",
+  "firma_naziv": "Tea'SDesigns",
+  "kor_ime_dekoratera": "erni",
+  "datum_zakazivanja": {
+    "$date": "2024-08-29T23:07:32.010Z"
+  },
+  "datum_izrade": {
+    "$date": "2024-08-31T12:00:00.000Z"
+  },
+  "datum_zavrsetka": {
+    "$date": "2024-09-04T21:45:55.873Z"
+  },
+  "datum_odrzavanja": {
+    "$date": "2024-08-29T23:06:04.000Z"
+  },
+  "uk_povrsina": 130,
+  "tip_baste": "2",
+  "naziv_restorana": "Srpska kuhinja",
+  "adresa_restorana": "Katiceva 25, Beograd",
+  "uk_bazen": 0,
+  "uk_namestaj": 0,
+  "uk_fontana": 5,
+  "br_stolova": 10,
+  "br_stolica": 30,
+  "uk_zelenilo": 50,
+  "kratak_opis": "Tradicionalni ukrasi i puno cveca.",
+  "usluge": [
+    {
+      "naziv": "Dekorisanje restoranski basta",
+      "opis": "Dekorisemo restoranske baste po dogvoru sa Vama.",
+      "cena": "8000"
+    }
+  ],
+  "recenzija": {
+    "komentar": "",
+    "ocena": 0,
+    "kor_ime": "",
+    "datum_vreme": "2024-08-29T23:06:04.000Z"
+  },
+  "status": "zavrseno",
+  "slika": "pocetna galerija slika 2.jpg",
+  "odrzavanoBarJednom": false,
+  "raspored_baste": [
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 5,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 40,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 75,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 110,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 145,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 180,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 40,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 75,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 110,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 145,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 180,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 215,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 250,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 285,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 5,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 40,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 75,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 110,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 145,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 180,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "bazen",
+      "x": 45,
+      "y": 115,
+      "width": 265,
+      "height": 90
+    },
+    {
+      "type": "lezaljka",
+      "x": 55,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "lezaljka",
+      "x": 110,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "sto",
+      "x": 95,
+      "y": 60,
+      "radius": 10
+    },
+    {
+      "type": "lezaljka",
+      "x": 220,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "lezaljka",
+      "x": 275,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "sto",
+      "x": 260,
+      "y": 60,
+      "radius": 10
+    }
+  ],
+  "broj_vodenih_povrsina": 1,
+  "komentar_odbijenica": ""
+},
+{
+  "_id": {
+    "$oid": "66d2fd871c03981efe4d0cf3"
+  },
+  "id": 8,
+  "kor_ime_vlasnika": "ristovic_tea",
+  "firma_naziv": "BastaLux",
+  "kor_ime_dekoratera": "zika",
+  "datum_zakazivanja": {
+    "$date": "2024-08-31T11:24:55.027Z"
+  },
+  "datum_izrade": {
+    "$date": "2024-09-02T09:00:00.000Z"
+  },
+  "datum_zavrsetka": {
+    "$date": "2024-09-04T21:43:06.843Z"
+  },
+  "datum_odrzavanja": {
+    "$date": "2024-08-31T11:22:10.352Z"
+  },
+  "uk_povrsina": 200,
+  "tip_baste": "1",
+  "naziv_restorana": "",
+  "adresa_restorana": "",
+  "uk_bazen": 50,
+  "uk_namestaj": 30,
+  "uk_fontana": 0,
+  "br_stolova": 0,
+  "br_stolica": 0,
+  "uk_zelenilo": 30,
+  "kratak_opis": "Lepa privatna basta...",
+  "usluge": [
+    {
+      "naziv": "Dekorisanje privatnih bašta",
+      "opis": "Kreiramo hramoniju u vašem dvorištu uz pomoć stručnog tima dizajnera.",
+      "cena": "7500"
+    }
+  ],
+  "recenzija": {
+    "komentar": "Ocarana!",
+    "ocena": 5,
+    "kor_ime": "ristovic_tea",
+    "datum_vreme": "2024-09-04T22:02:34.388Z"
+  },
+  "status": "zavrseno",
+  "slika": "basta sa bazenom 3.jpg",
+  "odrzavanoBarJednom": false,
+  "raspored_baste": [
+    {
+      "type": "stolica",
+      "x": 40.875,
+      "y": 16,
+      "width": 30,
+      "height": 50
+    },
+    {
+      "type": "stolica",
+      "x": 132.875,
+      "y": 16,
+      "width": 30,
+      "height": 50
+    },
+    {
+      "type": "stolica",
+      "x": 314.875,
+      "y": 170,
+      "width": 30,
+      "height": 50
+    },
+    {
+      "type": "stolica",
+      "x": 399.875,
+      "y": 169,
+      "width": 30,
+      "height": 50
+    },
+    {
+      "type": "bazen",
+      "x": 44.875,
+      "y": 101,
+      "width": 100,
+      "height": 50
+    },
+    {
+      "type": "bazen",
+      "x": 296.875,
+      "y": 100,
+      "width": 100,
+      "height": 50
+    },
+    {
+      "type": "zelenilo",
+      "x": 215.875,
+      "y": 13,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 305.875,
+      "y": 13,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 396.875,
+      "y": 11,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 17.875,
+      "y": 202,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 74.875,
+      "y": 202,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 127.875,
+      "y": 202,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "sto",
+      "x": 100.875,
+      "y": 45,
+      "radius": 20
+    },
+    {
+      "type": "sto",
+      "x": 373.875,
+      "y": 195,
+      "radius": 20
+    },
+    {
+      "type": "zelenilo",
+      "x": 259.875,
+      "y": 13,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 351.875,
+      "y": 11,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 172.875,
+      "y": 201,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "stolica",
+      "x": 191.875,
+      "y": 82,
+      "width": 50,
+      "height": 30
+    },
+    {
+      "type": "stolica",
+      "x": 191.875,
+      "y": 117,
+      "width": 50,
+      "height": 30
+    },
+    {
+      "type": "stolica",
+      "x": 191.875,
+      "y": 153,
+      "width": 50,
+      "height": 30
+    }
+  ],
+  "broj_vodenih_povrsina": 2,
+  "komentar_odbijenica": ""
+},
+{
+  "_id": {
+    "$oid": "66d598961b4aa5e14a99a58a"
+  },
+  "id": 9,
+  "kor_ime_vlasnika": "ristovic_tea",
+  "firma_naziv": "Tea'SDesigns",
+  "kor_ime_dekoratera": "zoki",
+  "datum_zakazivanja": {
+    "$date": "2024-09-02T10:51:02.315Z"
+  },
+  "datum_izrade": {
+    "$date": "2024-09-01T09:00:00.000Z"
+  },
+  "datum_zavrsetka": {
+    "$date": "2024-09-02T11:36:12.961Z"
+  },
+  "datum_odrzavanja": {
+    "$date": "2024-09-13T06:00:00.000Z"
+  },
+  "uk_povrsina": 100,
+  "tip_baste": "2",
+  "naziv_restorana": "Restoran",
+  "adresa_restorana": "Njegoseva 14, Beograd",
+  "uk_bazen": 0,
+  "uk_namestaj": 0,
+  "uk_fontana": 30,
+  "br_stolova": 10,
+  "br_stolica": 12,
+  "uk_zelenilo": 40,
+  "kratak_opis": "opis",
+  "usluge": [
+    {
+      "naziv": "Dekorisanje restoranskih bašta",
+      "opis": "Elegantna i sofisticirana rešenja za uređenje vaših restoranskih bašta.",
+      "cena": "8800"
+    }
+  ],
+  "recenzija": {
+    "komentar": "Veoma zadovoljna!!!",
+    "ocena": 5,
+    "kor_ime": "ristovic_tea",
+    "datum_vreme": "2024-09-03T11:47:55.480Z"
+  },
+  "status": "servisiranje",
+  "slika": "pocetna galerija slika 1.jpg",
+  "odrzavanoBarJednom": true,
+  "raspored_baste": [
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 5,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 40,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 75,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 110,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 145,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 180,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 5,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 40,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 75,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 110,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 145,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 180,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 215,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 250,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 285,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 215,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 5,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 40,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 75,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 110,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 145,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 320,
+      "y": 180,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "bazen",
+      "x": 45,
+      "y": 115,
+      "width": 265,
+      "height": 90
+    },
+    {
+      "type": "lezaljka",
+      "x": 55,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "lezaljka",
+      "x": 110,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "sto",
+      "x": 95,
+      "y": 60,
+      "radius": 10
+    },
+    {
+      "type": "lezaljka",
+      "x": 220,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "lezaljka",
+      "x": 275,
+      "y": 50,
+      "width": 25,
+      "height": 40
+    },
+    {
+      "type": "sto",
+      "x": 260,
+      "y": 60,
+      "radius": 10
+    }
+  ],
+  "broj_vodenih_povrsina": 1,
+  "komentar_odbijenica": ""
+},
+{
+  "_id": {
+    "$oid": "66d6f5e6dbe4a1903a2bafe5"
+  },
+  "id": 11,
+  "kor_ime_vlasnika": "ristovic_tea",
+  "firma_naziv": "Tea'SDesigns",
+  "kor_ime_dekoratera": "zoki",
+  "datum_zakazivanja": {
+    "$date": "2024-09-03T11:41:26.709Z"
+  },
+  "datum_izrade": {
+    "$date": "2024-09-03T14:00:00.000Z"
+  },
+  "datum_zavrsetka": {
+    "$date": "2024-09-04T16:01:26.888Z"
+  },
+  "datum_odrzavanja": {
+    "$date": "2024-09-03T11:35:05.208Z"
+  },
+  "uk_povrsina": 100,
+  "tip_baste": "1",
+  "naziv_restorana": "",
+  "adresa_restorana": "",
+  "uk_bazen": 30,
+  "uk_namestaj": 30,
+  "uk_fontana": 0,
+  "br_stolova": 0,
+  "br_stolica": 0,
+  "uk_zelenilo": 40,
+  "kratak_opis": "Zelim i ukrasni putic do kuce. \nBazen da bude beo sa stepenicama za laksi ulazak/izlazak dece.",
+  "usluge": [
+    {
+      "naziv": "Dekorisanje privatnih basta",
+      "opis": "Dekorisemo privatne baste po dogvoru sa Vama.",
+      "cena": "5000"
+    }
+  ],
+  "recenzija": {
+    "komentar": "",
+    "ocena": 0,
+    "kor_ime": "",
+    "datum_vreme": "2024-09-03T11:35:05.208Z"
+  },
+  "status": "zavrseno",
+  "slika": "basta_sa_bazenom_2.jpg",
+  "odrzavanoBarJednom": false,
+  "raspored_baste": [
+    {
+      "type": "bazen",
+      "x": 65.875,
+      "y": 94,
+      "width": 100,
+      "height": 50
+    },
+    {
+      "type": "sto",
+      "x": 111.875,
+      "y": 38,
+      "radius": 20
+    },
+    {
+      "type": "stolica",
+      "x": 34.875,
+      "y": 17,
+      "width": 30,
+      "height": 50
+    },
+    {
+      "type": "stolica",
+      "x": 154.875,
+      "y": 16,
+      "width": 30,
+      "height": 50
+    },
+    {
+      "type": "zelenilo",
+      "x": 12.875,
+      "y": 98,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 13.875,
+      "y": 141,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 51.875,
+      "y": 176,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 100.875,
+      "y": 176,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 145.875,
+      "y": 175,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 184.875,
+      "y": 138,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 183.875,
+      "y": 95,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "stolica",
+      "x": 234.875,
+      "y": 89,
+      "width": 50,
+      "height": 30
+    },
+    {
+      "type": "stolica",
+      "x": 236.875,
+      "y": 140,
+      "width": 50,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 208.875,
+      "y": 21,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 256.875,
+      "y": 21,
+      "width": 30,
+      "height": 30
+    }
+  ],
+  "broj_vodenih_povrsina": 1,
+  "komentar_odbijenica": ""
+},
+{
+  "_id": {
+    "$oid": "66d8d23b400cc23708d6776c"
+  },
+  "id": 12,
+  "kor_ime_vlasnika": "maja",
+  "firma_naziv": "BastaLux",
+  "kor_ime_dekoratera": "zika",
+  "datum_zakazivanja": {
+    "$date": "2024-09-04T21:33:47.559Z"
+  },
+  "datum_izrade": {
+    "$date": "2024-09-05T06:00:00.000Z"
+  },
+  "datum_zavrsetka": {
+    "$date": "2024-09-05T09:23:04.393Z"
+  },
+  "datum_odrzavanja": {
+    "$date": "2024-09-04T21:30:02.255Z"
+  },
+  "uk_povrsina": 50,
+  "tip_baste": "1",
+  "naziv_restorana": "",
+  "adresa_restorana": "",
+  "uk_bazen": 0,
+  "uk_namestaj": 30,
+  "uk_fontana": 0,
+  "br_stolova": 0,
+  "br_stolica": 0,
+  "uk_zelenilo": 20,
+  "kratak_opis": "Zelim puno zelenila i cveca. ",
+  "usluge": [
+    {
+      "naziv": "Dekorisanje privatnih bašta",
+      "opis": "Kreiramo hramoniju u vašem dvorištu uz pomoć stručnog tima dizajnera.",
+      "cena": "7500"
+    }
+  ],
+  "recenzija": {
+    "komentar": "Za svaku preporuku!",
+    "ocena": 5,
+    "kor_ime": "maja",
+    "datum_vreme": "2024-09-05T09:41:33.716Z"
+  },
+  "status": "zavrseno",
+  "slika": "priv_basta_cvece_bez_bazena.jpg",
+  "odrzavanoBarJednom": false,
+  "raspored_baste": [
+    {
+      "type": "sto",
+      "x": 107.875,
+      "y": 54,
+      "radius": 15
+    },
+    {
+      "type": "sto",
+      "x": 49.875,
+      "y": 132,
+      "radius": 15
+    },
+    {
+      "type": "sto",
+      "x": 121.875,
+      "y": 181,
+      "radius": 15
+    },
+    {
+      "type": "stolica",
+      "x": 41.875,
+      "y": 28,
+      "width": 30,
+      "height": 50
+    },
+    {
+      "type": "stolica",
+      "x": 28.875,
+      "y": 171,
+      "width": 50,
+      "height": 30
+    },
+    {
+      "type": "stolica",
+      "x": 168.875,
+      "y": 148,
+      "width": 30,
+      "height": 50
+    },
+    {
+      "type": "zelenilo",
+      "x": 164.875,
+      "y": 26,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 166.875,
+      "y": 73,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 6.875,
+      "y": 20,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 41.875,
+      "y": 203,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 170.875,
+      "y": 206,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 59.875,
+      "y": 87,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 106.875,
+      "y": 125,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 115.875,
+      "y": 78,
+      "width": 30,
+      "height": 30
+    }
+  ],
+  "broj_vodenih_povrsina": 0,
+  "komentar_odbijenica": ""
+},
+{
+  "_id": {
+    "$oid": "66d8d3df400cc23708d67776"
+  },
+  "id": 13,
+  "kor_ime_vlasnika": "maja",
+  "firma_naziv": "GardenArt",
+  "kor_ime_dekoratera": "lea",
+  "datum_zakazivanja": {
+    "$date": "2024-09-04T21:40:47.859Z"
+  },
+  "datum_izrade": {
+    "$date": "2024-09-05T08:00:00.000Z"
+  },
+  "datum_zavrsetka": {
+    "$date": "2024-09-05T09:34:46.719Z"
+  },
+  "datum_odrzavanja": {
+    "$date": "2024-09-04T21:34:11.652Z"
+  },
+  "uk_povrsina": 80,
+  "tip_baste": "1",
+  "naziv_restorana": "",
+  "adresa_restorana": "",
+  "uk_bazen": 10,
+  "uk_namestaj": 20,
+  "uk_fontana": 0,
+  "br_stolova": 0,
+  "br_stolica": 0,
+  "uk_zelenilo": 20,
+  "kratak_opis": "Zelim da bazen bude poplocan plavo-belim plocicama kao u Grckoj.",
+  "usluge": [
+    {
+      "naziv": "Dekorisanje bašta za specijalne događaje",
+      "opis": "Svadbe, rođendani ili drugi posebni događaji u bajkovitom okruženju.",
+      "cena": "11000"
+    }
+  ],
+  "recenzija": {
+    "komentar": "Bas sam tako zamisljala!",
+    "ocena": 4,
+    "kor_ime": "maja",
+    "datum_vreme": "2024-09-05T09:40:04.073Z"
+  },
+  "status": "zavrseno",
+  "slika": "blue_white_tiles.jpg",
+  "odrzavanoBarJednom": false,
+  "raspored_baste": [
+    {
+      "type": "bazen",
+      "x": 38.875,
+      "y": 42,
+      "width": 50,
+      "height": 100
+    },
+    {
+      "type": "bazen",
+      "x": 132.875,
+      "y": 42,
+      "width": 50,
+      "height": 100
+    },
+    {
+      "type": "zelenilo",
+      "x": 14.875,
+      "y": 0,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 65.875,
+      "y": 0,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 120.875,
+      "y": 1,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 172.875,
+      "y": -1,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": -1.125,
+      "y": 45,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 0.875,
+      "y": 100,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 0.875,
+      "y": 151,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "stolica",
+      "x": 49.875,
+      "y": 152,
+      "width": 30,
+      "height": 50
+    },
+    {
+      "type": "stolica",
+      "x": 126.875,
+      "y": 156,
+      "width": 50,
+      "height": 30
+    },
+    {
+      "type": "stolica",
+      "x": 127.875,
+      "y": 203,
+      "width": 50,
+      "height": 30
+    },
+    {
+      "type": "sto",
+      "x": 104.875,
+      "y": 205,
+      "radius": 15
+    },
+    {
+      "type": "zelenilo",
+      "x": -2.125,
+      "y": 195,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 47.875,
+      "y": 216,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 94.875,
+      "y": 50,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 94.875,
+      "y": 98,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 193.875,
+      "y": 40,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 194.875,
+      "y": 86,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 195.875,
+      "y": 141,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 195.875,
+      "y": 178,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 87.875,
+      "y": 148,
+      "width": 30,
+      "height": 30
+    }
+  ],
+  "broj_vodenih_povrsina": 2,
+  "komentar_odbijenica": ""
+},
+{
+  "_id": {
+    "$oid": "66d8dc56400cc23708d6781d"
+  },
+  "id": 14,
+  "kor_ime_vlasnika": "aleksa",
+  "firma_naziv": "GardenArt",
+  "kor_ime_dekoratera": "",
+  "datum_zakazivanja": {
+    "$date": "2024-09-04T22:16:54.623Z"
+  },
+  "datum_izrade": {
+    "$date": "2024-09-05T10:00:00.000Z"
+  },
+  "datum_zavrsetka": {
+    "$date": "2024-09-04T22:04:58.902Z"
+  },
+  "datum_odrzavanja": {
+    "$date": "2024-09-04T22:04:58.902Z"
+  },
+  "uk_povrsina": 100,
+  "tip_baste": "2",
+  "naziv_restorana": "Mamma mia!",
+  "adresa_restorana": "Ulica Đuzepea Mancinija 15, Beograd",
+  "uk_bazen": 0,
+  "uk_namestaj": 0,
+  "uk_fontana": 10,
+  "br_stolova": 10,
+  "br_stolica": 30,
+  "uk_zelenilo": 20,
+  "kratak_opis": "Dodajte i italijansku zastavu.",
+  "usluge": [
+    {
+      "naziv": "Uređenje tematskih bašta",
+      "opis": "Tematsko uređenje bašti po vašoj želji, uključujući stilizaciju i odabir elemenata.",
+      "cena": "9500"
+    }
+  ],
+  "recenzija": {
+    "komentar": "",
+    "ocena": 0,
+    "kor_ime": "",
+    "datum_vreme": "2024-09-04T22:04:58.902Z"
+  },
+  "status": "kreirano",
+  "slika": "",
+  "odrzavanoBarJednom": false,
+  "raspored_baste": [
+    {
+      "type": "fontana",
+      "x": 98.875,
+      "y": 130,
+      "radius": 25
+    },
+    {
+      "type": "zelenilo",
+      "x": 32.875,
+      "y": 66,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 81.875,
+      "y": 66,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 76.875,
+      "y": 23,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 33.875,
+      "y": 169,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 78.875,
+      "y": 167,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 32.875,
+      "y": 117,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 32.875,
+      "y": 23,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 34.875,
+      "y": 212,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 80.875,
+      "y": 212,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "stolica",
+      "x": 136.875,
+      "y": 38,
+      "width": 50,
+      "height": 30
+    },
+    {
+      "type": "sto",
+      "x": 161.875,
+      "y": 96,
+      "radius": 15
+    },
+    {
+      "type": "stolica",
+      "x": 142.875,
+      "y": 172,
+      "width": 50,
+      "height": 30
+    },
+    {
+      "type": "sto",
+      "x": 162.875,
+      "y": 149,
+      "radius": 15
+    },
+    {
+      "type": "stolica",
+      "x": 199.875,
+      "y": 84,
+      "width": 30,
+      "height": 50
+    },
+    {
+      "type": "sto",
+      "x": 246.875,
+      "y": 108,
+      "radius": 15
+    },
+    {
+      "type": "sto",
+      "x": 220.875,
+      "y": 36,
+      "radius": 15
+    },
+    {
+      "type": "sto",
+      "x": 231.875,
+      "y": 178,
+      "radius": 15
+    },
+    {
+      "type": "sto",
+      "x": 169.875,
+      "y": 224,
+      "radius": 15
+    }
+  ],
+  "broj_vodenih_povrsina": 1,
+  "komentar_odbijenica": ""
+},
+{
+  "_id": {
+    "$oid": "66d9800711b8ada6e07a8c10"
+  },
+  "id": 15,
+  "kor_ime_vlasnika": "aleksa",
+  "firma_naziv": "ArtisticYards",
+  "kor_ime_dekoratera": "nik",
+  "datum_zakazivanja": {
+    "$date": "2024-09-05T09:55:19.261Z"
+  },
+  "datum_izrade": {
+    "$date": "2024-09-05T10:00:00.000Z"
+  },
+  "datum_zavrsetka": {
+    "$date": "2024-09-05T11:00:00.000Z"
+  },
+  "datum_odrzavanja": {
+    "$date": "2024-09-05T09:50:30.056Z"
+  },
+  "uk_povrsina": 100,
+  "tip_baste": "2",
+  "naziv_restorana": "Dok se kafa ne ohladi",
+  "adresa_restorana": "Bulevar umetnosti 45, Novi Beograd",
+  "uk_bazen": 0,
+  "uk_namestaj": 0,
+  "uk_fontana": 5,
+  "br_stolova": 10,
+  "br_stolica": 25,
+  "uk_zelenilo": 20,
+  "kratak_opis": "Basta treba da ima lepe drvene stolice i stolove u bojama kafe.",
+  "usluge": [
+    {
+      "naziv": "Tematsko uređenje bašti",
+      "opis": "Personalizovano tematsko uređenje bašti za posebne prilike.",
+      "cena": "10000"
+    }
+  ],
+  "recenzija": {
+    "komentar": "",
+    "ocena": 0,
+    "kor_ime": "",
+    "datum_vreme": "2024-09-05T09:50:30.056Z"
+  },
+  "status": "potvrdjeno",
+  "slika": "",
+  "odrzavanoBarJednom": false,
+  "raspored_baste": [
+    {
+      "type": "zelenilo",
+      "x": 84.875,
+      "y": 17,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 38.875,
+      "y": 18,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 8.875,
+      "y": 63,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 9.875,
+      "y": 107,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 9.875,
+      "y": 148,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 42.875,
+      "y": 185,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 89.875,
+      "y": 184,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "sto",
+      "x": 68.875,
+      "y": 91,
+      "radius": 15
+    },
+    {
+      "type": "sto",
+      "x": 99.875,
+      "y": 149,
+      "radius": 15
+    },
+    {
+      "type": "stolica",
+      "x": 91.875,
+      "y": 67,
+      "width": 30,
+      "height": 50
+    },
+    {
+      "type": "fontana",
+      "x": 171.875,
+      "y": 172,
+      "radius": 25
+    },
+    {
+      "type": "zelenilo",
+      "x": 134.875,
+      "y": 17,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 178.875,
+      "y": 16,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 178.875,
+      "y": 63,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 181.875,
+      "y": 105,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "stolica",
+      "x": 132.875,
+      "y": 67,
+      "width": 30,
+      "height": 50
+    }
+  ],
+  "broj_vodenih_povrsina": 1,
+  "komentar_odbijenica": ""
+},
+{
+  "_id": {
+    "$oid": "66d983d111b8ada6e07a8c61"
+  },
+  "id": 16,
+  "kor_ime_vlasnika": "nikola",
+  "firma_naziv": "EcoDecor",
+  "kor_ime_dekoratera": "jana",
+  "datum_zakazivanja": {
+    "$date": "2024-09-05T10:11:29.568Z"
+  },
+  "datum_izrade": {
+    "$date": "2024-09-05T11:00:00.000Z"
+  },
+  "datum_zavrsetka": {
+    "$date": "2024-09-05T13:00:00.000Z"
+  },
+  "datum_odrzavanja": {
+    "$date": "2024-09-05T10:04:23.713Z"
+  },
+  "uk_povrsina": 50,
+  "tip_baste": "1",
+  "naziv_restorana": "",
+  "adresa_restorana": "",
+  "uk_bazen": 10,
+  "uk_namestaj": 20,
+  "uk_fontana": 0,
+  "br_stolova": 0,
+  "br_stolica": 0,
+  "uk_zelenilo": 20,
+  "kratak_opis": "Ugradite nam i onu platnenu lezaljku oko dva drveta u basti.",
+  "usluge": [
+    {
+      "naziv": "Održavanje eksterijera",
+      "opis": "Redovno održavanje i osvežavanje baštenskih prostora.",
+      "cena": "6000"
+    }
+  ],
+  "recenzija": {
+    "komentar": "",
+    "ocena": 0,
+    "kor_ime": "",
+    "datum_vreme": "2024-09-05T10:04:23.713Z"
+  },
+  "status": "potvrdjeno",
+  "slika": "",
+  "odrzavanoBarJednom": false,
+  "raspored_baste": [
+    {
+      "type": "bazen",
+      "x": 39.875,
+      "y": 59,
+      "width": 50,
+      "height": 100
+    },
+    {
+      "type": "stolica",
+      "x": 111.875,
+      "y": 60,
+      "width": 50,
+      "height": 30
+    },
+    {
+      "type": "stolica",
+      "x": 113.875,
+      "y": 112,
+      "width": 50,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 16.875,
+      "y": 13,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 13.875,
+      "y": 178,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 67.875,
+      "y": 177,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 64.875,
+      "y": 13,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 115.875,
+      "y": 177,
+      "width": 30,
+      "height": 30
+    },
+    {
+      "type": "zelenilo",
+      "x": 109.875,
+      "y": 13,
+      "width": 30,
+      "height": 30
+    }
+  ],
+  "broj_vodenih_povrsina": 1,
+  "komentar_odbijenica": ""
+}]

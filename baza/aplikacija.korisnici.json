@@ -1,0 +1,468 @@
+[{
+  "_id": {
+    "$oid": "66c39a31694bc3dc63122b72"
+  },
+  "kor_ime": "maja",
+  "lozinka": "$2b$10$mgOQiLm4lCACTM.3RXZCauo1TxQzqL2TqlwmwZx1NY6UepDFEw6jq",
+  "ime": "Maja",
+  "prezime": "Ristovic",
+  "pol": "Z",
+  "tip": "vlasnik",
+  "adresa": "Branka Krsmanovica 24",
+  "telefon": "065/208-318",
+  "imejl": "ristovic.maja@gmail.com",
+  "slika": "2Nadezda-Petrovic-kosovski-bozuri-Gracanica-1913..jpg",
+  "br_kred_kartice": "301123456123457",
+  "status_naloga": "potvrdjen",
+  "id_firme": -1
+},
+{
+  "_id": {
+    "$oid": "66c4520ef0444aae87baa745"
+  },
+  "kor_ime": "ristovic_tea",
+  "lozinka": "$2b$10$1u.eYBEAjV2J7APiqXHySeZ6rsFfSDqyCRDRv7IrvuJTGyPe0ct3y",
+  "ime": "Teodora",
+  "prezime": "Ristovic",
+  "pol": "Z",
+  "tip": "vlasnik",
+  "adresa": "Branka Krsmanovica 13",
+  "telefon": "062/535-868",
+  "imejl": "ristovic.tea@gmail.com",
+  "slika": "profilna_macaa.jpg",
+  "br_kred_kartice": "4539123445676782",
+  "status_naloga": "potvrdjen",
+  "id_firme": -1
+},
+{
+  "_id": {
+    "$oid": "66c5d39a346b2c158ef33e0a"
+  },
+  "kor_ime": "marko",
+  "lozinka": "$2b$10$8biyS.EjcnI3cTZkHT8Rse8wCf8pU45Jshco4Lwpof5AgYejnN7rG",
+  "ime": "Marko",
+  "prezime": "Markovic",
+  "pol": "M",
+  "tip": "vlasnik",
+  "adresa": "Bulevar kralja Aleksandra 9",
+  "telefon": "063/852-128",
+  "imejl": "marko@gmail.com",
+  "slika": "bogdan.jpg",
+  "br_kred_kartice": "301412563854796",
+  "status_naloga": "odbijen",
+  "id_firme": -1
+},
+{
+  "_id": {
+    "$oid": "66c6171b1d5f0b9a2c7931ac"
+  },
+  "kor_ime": "aleksa",
+  "lozinka": "$2b$10$811CLRm7lKB4kdZvYEGuEOhlatD0mcu1euiT5sTPll/3/OjOiTHG6",
+  "ime": "Aleksa",
+  "prezime": "Avramovic",
+  "pol": "M",
+  "tip": "vlasnik",
+  "adresa": "Spanski boraca 15, Beograd",
+  "telefon": "062/535-867",
+  "imejl": "aleksa@gmail.com",
+  "slika": "aleksa.jpg",
+  "br_kred_kartice": "4539123412341234",
+  "status_naloga": "potvrdjen",
+  "id_firme": -1
+},
+{
+  "_id": {
+    "$oid": "66caf82d962c212cb264c994"
+  },
+  "kor_ime": "Bogdan",
+  "lozinka": "$2b$10$PHYBU.XwFcnjs7F3N.gIf.NZGiRt2XlfTEWQ..Vi7OI4HvwKL1S1e",
+  "ime": "Bogdan",
+  "prezime": "Bogdanovic",
+  "pol": "M",
+  "tip": "vlasnik",
+  "adresa": "Majke Jevrosime 34",
+  "telefon": "062/456-123",
+  "imejl": "bogi@gmail.com",
+  "slika": "bogdan.jpg",
+  "br_kred_kartice": "301147852963852",
+  "status_naloga": "kreiran",
+  "id_firme": -1
+},
+{
+  "_id": {
+    "$oid": "66ce4a009b1ea9ca96e2dbf8"
+  },
+  "kor_ime": "nikola",
+  "lozinka": "$2b$10$TxLy.HtTxdIy3tGCtih2UuLDDPbhcnVvSIUAnwisQtn/P23S1fNh6",
+  "ime": "Nikola",
+  "prezime": "Nikolic",
+  "pol": "M",
+  "tip": "vlasnik",
+  "adresa": "Maksima Gorkog 16, Beograd",
+  "telefon": "063/205-401",
+  "imejl": "nikolanikolic@gmail.com",
+  "slika": "lotr.jpg",
+  "br_kred_kartice": "4539159745861254",
+  "status_naloga": "potvrdjen",
+  "id_firme": -1
+},
+{
+  "_id": {
+    "$oid": "66cf5c0024c7d0e0c4ad90bf"
+  },
+  "kor_ime": "stefi",
+  "lozinka": "$2b$10$lnVe7nt4JB7/ThkA1HMnL.hT854oeQ94rFv8E/ErFA0WGCsukDouS",
+  "ime": "Stefan",
+  "prezime": "Stefic",
+  "pol": "M",
+  "tip": "vlasnik",
+  "adresa": "Mladenovacki put 13, Mladenovac",
+  "telefon": "069/825-1472",
+  "imejl": "stefan@gmail.com",
+  "slika": "avramovic2.jpg",
+  "br_kred_kartice": "5212345678426951",
+  "status_naloga": "potvrdjen",
+  "id_firme": -1
+},
+{
+  "_id": {
+    "$oid": "66c4565cf0444aae87baa754"
+  },
+  "kor_ime": "luka",
+  "lozinka": "$2b$10$rP61x0UYnXtVbjKCzsA9Ie.dPp0FyNOCtmeP1MxcbGLMoNwiL6Wme",
+  "ime": "Luka",
+  "prezime": "Ristovic",
+  "pol": "M",
+  "tip": "dekorater",
+  "adresa": "Branka Krsmanovica 13",
+  "telefon": "069/845-147",
+  "imejl": "luka@gmail.com",
+  "slika": "star wars.jpg",
+  "br_kred_kartice": "5112345677894561",
+  "status_naloga": "potvrdjen",
+  "id_firme": 6
+},
+{
+  "_id": {
+    "$oid": "66c654081d5f0b9a2c793261"
+  },
+  "kor_ime": "zika",
+  "lozinka": "$2b$10$1gJjg1lCuIiwrI3LTy7FgeY7mFVJP7T3TAyPy2c3fcLqJApKuUQN6",
+  "ime": "Zika",
+  "prezime": "Zikic",
+  "pol": "M",
+  "tip": "dekorater",
+  "adresa": "Zikina ulica 23",
+  "telefon": "062/586-318",
+  "imejl": "zika@gmail.com",
+  "slika": "zikaDesigns.jpg",
+  "br_kred_kartice": "301456123789159",
+  "status_naloga": "potvrdjen",
+  "id_firme": 1
+},
+{
+  "_id": {
+    "$oid": "66c8c1f4f0deb29c7331acd0"
+  },
+  "kor_ime": "zoki",
+  "lozinka": "$2b$10$6J6KENT3PgqKvqY2tqgfNeQUxlLIFbLVdoTxXzcoCo2jtjWL3xn0G",
+  "ime": "Zoran",
+  "prezime": "Ristovic",
+  "pol": "M",
+  "tip": "dekorater",
+  "adresa": "Branka Krsmanovica 24",
+  "telefon": "065/896-703",
+  "imejl": "zoki@gmail.com",
+  "slika": "dog.jpg",
+  "br_kred_kartice": "301456789123753",
+  "status_naloga": "potvrdjen",
+  "id_firme": 7
+},
+{
+  "_id": {
+    "$oid": "66ca0d08a970595b96704178"
+  },
+  "kor_ime": "pera",
+  "lozinka": "$2b$10$D2qr9MmdljU0I5eSP.vWfeUtvNMwquu831asl7WLeRBVo1OE7LWp6",
+  "ime": "Petar",
+  "prezime": "Petrovic",
+  "pol": "M",
+  "tip": "dekorater",
+  "adresa": "Ulica Petra Petrovica 12",
+  "telefon": "062/894-123",
+  "imejl": "pera@gmail.com",
+  "slika": "moskva.jpg",
+  "br_kred_kartice": "301456789258741",
+  "status_naloga": "potvrdjen",
+  "id_firme": 6
+},
+{
+  "_id": {
+    "$oid": "66ca105ea970595b9670418f"
+  },
+  "kor_ime": "jana",
+  "lozinka": "$2b$10$KNg/k2.I7eosNF9b9tdmBebtHso8DVTG7VfNccKJ6GYOmXIgrpqvu",
+  "ime": "Jana",
+  "prezime": "Jovanovic",
+  "pol": "Z",
+  "tip": "dekorater",
+  "adresa": "Jedrenska 16, Beograd",
+  "telefon": "063/205-390",
+  "imejl": "ana@gmail.com",
+  "slika": "flower`.jpg",
+  "br_kred_kartice": "302456789147963",
+  "status_naloga": "potvrdjen",
+  "id_firme": 4
+},
+{
+  "_id": {
+    "$oid": "66cf5fa224c7d0e0c4ad90d0"
+  },
+  "kor_ime": "erni",
+  "lozinka": "$2b$10$3T/.I6UBptev34cMGaEw8.Hk3StOCTd/1QCVqaNSfevDjG8Epiy4i",
+  "ime": "Ernesto",
+  "prezime": "Stokati",
+  "pol": "M",
+  "tip": "dekorater",
+  "adresa": "Novopazarska 15, Beograd",
+  "telefon": "063/123-748",
+  "imejl": "erni@gmail.com",
+  "slika": "erni1.jpg",
+  "br_kred_kartice": "4539125474588569",
+  "status_naloga": "potvrdjen",
+  "id_firme": 7
+},
+{
+  "_id": {
+    "$oid": "66c453c5f0444aae87baa749"
+  },
+  "kor_ime": "admin",
+  "lozinka": "$2b$10$aNjXVz/6E9M7AG8yyQBc4uPbT.rWBHLFCBnULhu/9I59VQZIcYOQS",
+  "ime": "Admin",
+  "prezime": "Adminovic",
+  "pol": "M",
+  "tip": "admin",
+  "adresa": "Ulica admin 12",
+  "telefon": "062/789-445",
+  "imejl": "admin@gmail.com",
+  "slika": "lotr.jpg",
+  "br_kred_kartice": "5112147677894561",
+  "status_naloga": "potvrdjen",
+  "id_firme": -1
+},
+{
+  "_id": {
+    "$oid": "66d0884344ce490291b48cff"
+  },
+  "kor_ime": "zare",
+  "lozinka": "$2b$10$kqCYGrWEdLCemO3bR6JF2OhsPD8nhEfLXrrtEFFsOhf/u10s3Yray",
+  "ime": "Zarko",
+  "prezime": "Zarkovic",
+  "pol": "M",
+  "tip": "dekorater",
+  "adresa": "Beogradska 14, Beograd",
+  "telefon": "063/205-998",
+  "imejl": "zare@gmail.com",
+  "slika": "math.jpg",
+  "br_kred_kartice": "301456987478523",
+  "status_naloga": "potvrdjen",
+  "id_firme": 5
+},
+{
+  "_id": {
+    "$oid": "66d08bf344ce490291b48d0e"
+  },
+  "kor_ime": "nik",
+  "lozinka": "$2b$10$4GTdcgnruxyre7VSEfE18uGwiLF8Fu59YBCOC.nmS4vu3BcelHXwO",
+  "ime": "Nikolas",
+  "prezime": "Martinovski",
+  "pol": "M",
+  "tip": "dekorater",
+  "adresa": "Stojana Protica 17, Beograd",
+  "telefon": "065/897-313",
+  "imejl": "nik@gmail.com",
+  "slika": "petra2-300x300.jpg",
+  "br_kred_kartice": "4539123645877896",
+  "status_naloga": "potvrdjen",
+  "id_firme": 5
+},
+{
+  "_id": {
+    "$oid": "66d08c8f44ce490291b48d17"
+  },
+  "kor_ime": "sara",
+  "lozinka": "$2b$10$dd9hJPYQwlg0KoUMcAVLxeHBgC8yO2OjWBFEGDSg.73QP/NWViq7y",
+  "ime": "Sara",
+  "prezime": "Cvetkovic",
+  "pol": "Z",
+  "tip": "dekorater",
+  "adresa": "Novosadska ulica 14, Novi Sad",
+  "telefon": "062/894-221",
+  "imejl": "sara@gmail.com",
+  "slika": "van gog almond.jpg",
+  "br_kred_kartice": "5174125899632587",
+  "status_naloga": "potvrdjen",
+  "id_firme": 3
+},
+{
+  "_id": {
+    "$oid": "66d08e8d44ce490291b48d27"
+  },
+  "kor_ime": "sale",
+  "lozinka": "$2b$10$fnQVXqghsjjaRf9gexqaQOCL40xH1m1fM9WriCq7lOJBL2A.kxl8a",
+  "ime": "Aleksandar",
+  "prezime": "Stojanovic",
+  "pol": "M",
+  "tip": "dekorater",
+  "adresa": "Ulica kralja Petra 16, Kragujevac",
+  "telefon": "069/852-114",
+  "imejl": "sale@gmail.com",
+  "slika": "PRIZREN_1_668A9068-2.jfif",
+  "br_kred_kartice": "301741258456123",
+  "status_naloga": "potvrdjen",
+  "id_firme": 3
+},
+{
+  "_id": {
+    "$oid": "66d08f5d44ce490291b48d3d"
+  },
+  "kor_ime": "lea",
+  "lozinka": "$2b$10$s9goaopMAM4jNJyIsD9fFOxB.ev.R7diHK7CuPm7dLb2LrjiSICRS",
+  "ime": "Lea",
+  "prezime": "Petrovic",
+  "pol": "Z",
+  "tip": "dekorater",
+  "adresa": "Knezevacka 13, Nis",
+  "telefon": "065/845-789",
+  "imejl": "lea@gmail.com",
+  "slika": "hram.jpg",
+  "br_kred_kartice": "301741963258741",
+  "status_naloga": "potvrdjen",
+  "id_firme": 2
+},
+{
+  "_id": {
+    "$oid": "66d0902844ce490291b48d46"
+  },
+  "kor_ime": "novak",
+  "lozinka": "$2b$10$DmlHBdewdafINr1Wq6BZvO9j/qACj5S9IDmU48iK/4cOUOho8XHda",
+  "ime": "Novak",
+  "prezime": "Krsmanovic",
+  "pol": "M",
+  "tip": "dekorater",
+  "adresa": "Petrovacka 37, Petrovac",
+  "telefon": "064/123-554",
+  "imejl": "novak@gmail.com",
+  "slika": "PRIZREN_5_E67B6579-2.jfif",
+  "br_kred_kartice": "5147856921236547",
+  "status_naloga": "potvrdjen",
+  "id_firme": 2
+},
+{
+  "_id": {
+    "$oid": "66d0926644ce490291b48d63"
+  },
+  "kor_ime": "ema",
+  "lozinka": "$2b$10$xe3JwFIEblOve3E8SIQm9esY4lU2wJIGPnqUAVkJqy.LyvgCf8Z2i",
+  "ime": "Emilija",
+  "prezime": "Smiljanic",
+  "pol": "Z",
+  "tip": "dekorater",
+  "adresa": "Savska 20, Beograd",
+  "telefon": "061/456-821",
+  "imejl": "ema@gmail.com",
+  "slika": "moreto.jpg",
+  "br_kred_kartice": "301456789852147",
+  "status_naloga": "potvrdjen",
+  "id_firme": 4
+},
+{
+  "_id": {
+    "$oid": "66d343531c03981efe4d0da5"
+  },
+  "kor_ime": "ivan",
+  "lozinka": "$2b$10$XZPVqW2xynL1QSA9RxHUiefQsLm35D9itZmj/u0rPUharXet2BoxS",
+  "ime": "Ivan",
+  "prezime": "Ivanovic",
+  "pol": "M",
+  "tip": "vlasnik",
+  "adresa": "Cvijiceva 16, Beograd",
+  "telefon": "063/895-457",
+  "imejl": "ivan@gmail.com",
+  "slika": "lotr.jpg",
+  "br_kred_kartice": "301852147456123",
+  "status_naloga": "odbijen",
+  "id_firme": -1
+},
+{
+  "_id": {
+    "$oid": "66d6e509dbe4a1903a2baf5b"
+  },
+  "kor_ime": "miki",
+  "lozinka": "$2b$10$ukmbtd9HeYhGqJ/AdtnPvOVGL8.ASkDLorUt8p22t.UOgrElAd1E6",
+  "ime": "Mihailo",
+  "prezime": "Mikic",
+  "pol": "M",
+  "tip": "vlasnik",
+  "adresa": "Resavska 13, Beograd",
+  "telefon": "062/895-145",
+  "imejl": "miki@gmail.com",
+  "slika": "marvel.png",
+  "br_kred_kartice": "361234568521478",
+  "status_naloga": "kreiran",
+  "id_firme": -1
+},
+{
+  "_id": {
+    "$oid": "66d6e61ddbe4a1903a2baf70"
+  },
+  "kor_ime": "user",
+  "lozinka": "$2b$10$eeFL0Tf9kjpZJoWLlhvQQOz94CEM4NtdCdn99qxaDL6DvNSzqSxOy",
+  "ime": "User",
+  "prezime": "Useric",
+  "pol": "M",
+  "tip": "vlasnik",
+  "adresa": "Ulica u Beogradu 13",
+  "telefon": "062/895-444",
+  "imejl": "user@gmail.com",
+  "slika": "default_user.jpg",
+  "br_kred_kartice": "5575395181478523",
+  "status_naloga": "kreiran",
+  "id_firme": -1
+},
+{
+  "_id": {
+    "$oid": "66d736c7a36262819a1a7fdb"
+  },
+  "kor_ime": "mica",
+  "lozinka": "$2b$10$O9MpjBwNdHOBcjboGixNU.TCIsxwBkJ3TJC7EFL65RC4PIp0QSsq.",
+  "ime": "Milivoje",
+  "prezime": "Micic",
+  "pol": "M",
+  "tip": "dekorater",
+  "adresa": "Milesevska 55, Beograd",
+  "telefon": "069/205-314",
+  "imejl": "mica@gmail.com",
+  "slika": "zastava.jpeg",
+  "br_kred_kartice": "301123654789654",
+  "status_naloga": "potvrdjen",
+  "id_firme": 1
+},
+{
+  "_id": {
+    "$oid": "66d73710a36262819a1a7fde"
+  },
+  "kor_ime": "rastko",
+  "lozinka": "$2b$10$knc3j38QBVN0GqQ2DR1.oOp6WGtzfPXLRHvnmVMBTRSPjHS5wJiqS",
+  "ime": "Rastko",
+  "prezime": "Ristic",
+  "pol": "M",
+  "tip": "dekorater",
+  "adresa": "Cara Nikolaja 32, Beograd",
+  "telefon": "062/789-441",
+  "imejl": "rastko@gmail.com",
+  "slika": "math.jpg",
+  "br_kred_kartice": "381236547412589",
+  "status_naloga": "potvrdjen",
+  "id_firme": 7
+}]

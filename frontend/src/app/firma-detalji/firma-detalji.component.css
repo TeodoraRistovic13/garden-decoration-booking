@@ -1,0 +1,265 @@
+/*---------------------- stil za navigaciju ------------------*/
+
+body {
+  min-height: 100vh;
+  background: url('../../assets/2Nadezda-Petrovic-kosovski-bozuri-Gracanica-1913..jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar {
+  padding: 20px 100px;
+}
+
+.logo {
+  font-size: 2em;
+  color: #fff;
+  user-select: none;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.navigation a {
+  position: relative;
+  font-size: 1.1em;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+.navigation a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: #fff;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .5s;
+}
+
+.navigation a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.nav-item{
+  margin-bottom: 15px;
+  max-width: 200px;
+}
+
+.btnLogin-popup {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight : 500;
+  margin-left: 40px;
+  transition : .5s;
+}
+
+.btnLogin-popup:hover {
+  background: rgba(255,255,255,.2);
+  /* background: #fff; */
+  color: #162938;
+}
+
+.container {
+
+  background-color: rgba(255, 255, 255, .2);
+  backdrop-filter: blur(20px);
+  color: #fff;
+  border-radius: 10px;
+  height: auto;
+  padding-bottom: 50px;
+  margin-top: 10px;
+  border: 2px solid rgba(255, 255, 255, .2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+
+}
+
+
+.map-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-title {
+  margin-bottom: 10px; /* Obezbeđuje razmak između naslova i mape */
+}
+
+
+#map {
+  height: 300px;
+  width: 100%;
+  border-radius: 15px; /* Zaobljeni uglovi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Blaga senka */
+  border: 3px solid #ddd; /* Svetli okvir */
+}
+
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  /*height: 400px; /* Primer visine, možete prilagoditi po potrebi */
+}
+.card-body .map-container {
+  flex-grow: 1;
+}
+
+
+.close {
+  position: absolute;
+  top: calc(45% - 1.5rem); /* Podešavanje na sredinu visine naslova */
+  right: 10px;
+  z-index: 1;
+}
+
+.mapaPrikaz {
+  padding-top: 20px;
+  padding-right: 15px;
+}
+
+.mapaPrikaz h4 {
+  padding: 10px 10px;
+
+}
+
+.infoFirmeKolona {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoWrapper {
+  padding-top: 10px;
+
+}
+
+.infoWrapper .prosecnaOcena{
+  font-size: 16px;
+  padding-left: 30px;
+}
+
+.infoWrapper p{
+  font-size: 1em;
+  padding-left: 30px;
+}
+.infoWrapper h4 {
+  padding: 20px 20px;
+  padding-left: 30px;
+  padding-bottom: 5px;
+  font-size: 2em;
+}
+
+.infoWrapper hr {
+  color: #fff;
+}
+
+
+.btnBook {
+  /* padding-left: 30px; da bude u ravni otp sa podacima */
+  padding-top: 10px;
+  padding-left: 30px;
+
+
+}
+
+.btn-md {
+  padding: .5rem 1rem;
+  font-size: 12px;
+  background-color: rgba(255,255,255,.2);
+  border: 2px solid #fff;
+  min-width: max-content;
+
+}
+
+
+
+.komentari .ime {
+  font-size: 15px;
+}
+
+.komentari .komentar {
+  font-size: 13px;
+}
+
+.komentari hr {
+  color: #fff;
+}
+
+
+/* cenovnik usluga */
+.services-container {
+  padding: 20px;
+  border-radius: 10px;
+  /* max-width: 70%; */
+  /* margin: 0 auto; */
+  display: flex;
+  justify-content: center;
+
+}
+
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.service-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+
+}
+
+.service-details {
+  margin-right: 20px;
+}
+
+.service-details h4 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.service-details span {
+  font-size: 13px;
+  color: #fff;
+}
+
+.service-price {
+  display: flex;
+  align-items: center;
+}
+
+.service-price span {
+  font-size: 1rem;
+  color: #fff;
+  margin-right: 15px;
+  width: max-content;
+}
+
+.redKomentara{
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+
+

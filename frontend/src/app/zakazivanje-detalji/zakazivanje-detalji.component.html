@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zakazivanje detalji</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent" *ngIf="ulogovan.tip=='vlasnik'">
+    <h2 class="logo">Logo</h2>
+    <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto navigation">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/prikaz-profila">Profil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/firme-vlasnik">Firme</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/zakazivanja-vlasnik">Zakazivanja</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/odrzavanje-vlasnik">Odrzavanje</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btnLogin-popup" (click)="izlogujSe()">Izloguj se</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent" *ngIf="ulogovan.tip=='dekorater'">
+    <h2 class="logo">Logo</h2>
+    <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto navigation">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/prikaz-profila">Profil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/zakazivanja-dekorater">Zakazivanja</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/odrzavanja-dekorater">Odrzavanja</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/statistika-dekorater">Statistika</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btnLogin-popup" (click)="izlogujSe()">Izloguj se</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row tabelarniPrikazRed">
+      <h4 class="text-center">Zakazivanje RB: {{zakazivanje.id}}</h4>
+      <div class="col-sm-12 table-responsive">
+        <table class="table table-sortable">
+          <tbody>
+            <tr>
+              <td class="prvaKolona">Tip baste</td>
+              <td class="drugaKolona">{{dohvTipBaste(zakazivanje.tip_baste)}}</td>
+            </tr>
+            <tr *ngIf="zakazivanje.tip_baste=='1'">
+              <td class="prvaKolona">Adresa</td>
+              <td class="drugaKolona">Kontaktirajte vlasnika</td>
+            </tr>
+            <tr *ngIf="zakazivanje.tip_baste=='2'">
+              <td class="prvaKolona">Naziv i adresa restorana</td>
+              <td class="drugaKolona"><i>{{zakazivanje.naziv_restorana}}</i> - {{zakazivanje.adresa_restorana}}</td>
+            </tr>
+            <tr>
+              <td class="prvaKolona">Datum izrade </td>
+              <td class="drugaKolona">{{zakazivanje.datum_izrade | date :'dd.MM.yyyy HH:mm'}} </td>
+            </tr>
+            <tr>
+              <td class="prvaKolona">Datum zavrsetka</td>
+              <td class="drugaKolona" *ngIf="statusZavrseno()">{{zakazivanje.datum_zavrsetka | date:'dd.MM.yyyy HH:mm'}} </td>
+              <td class="drugaKolona" *ngIf="zakazivanje.status == 'kreirano'"> <i>Nije jos potvrdjen posao</i> </td>
+              <td class="drugaKolona" *ngIf="zakazivanje.status == 'otkazano'"> <i>Posao je otkazan</i> </td>
+              <td class="drugaKolona" *ngIf="zakazivanje.status == 'odbijeno'"> <i>Posao je odbijen</i> </td>
+            </tr>
+            <tr>
+              <td class="prvaKolona">Vlasnik</td>
+              <td class="drugaKolona">{{vlasnik.ime }} {{ vlasnik.prezime}} {{ vlasnik.telefon}} </td>
+            </tr>
+            <tr >
+              <td class="prvaKolona">Dekorater</td>
+              <td class="drugaKolona" *ngIf="zakazivanje.kor_ime_dekoratera !=''">{{dekorater.ime}} {{ dekorater.prezime}} {{dekorater.telefon}} </td>
+              <td class="drugaKolona" *ngIf="zakazivanje.kor_ime_dekoratera ==''"><i>Posao je slobodan</i></td>
+            </tr>
+            <tr>
+              <td class="prvaKolona">Firma</td>
+              <td class="drugaKolona">{{zakazivanje.firma_naziv}} </td>
+            </tr>
+
+            <tr>
+              <td class="prvaKolona">Kratak opis</td>
+              <td class="drugaKolona">{{zakazivanje.kratak_opis}} </td>
+            </tr>
+            <tr>
+              <td class="prvaKolona">Potrebne usluge</td>
+              <td class="drugaKolona">
+                <p *ngFor="let u of zakazivanje.usluge">{{u.naziv}}</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="prvaKolona">Status zakazivanja</td>
+              <td class="drugaKolona">{{zakazivanje.status}}</td>
+            </tr>
+            <tr>
+              <td class="prvaKolona">Broj vodenih povrsina</td>
+              <td class="drugaKolona">{{zakazivanje.broj_vodenih_povrsina}}</td>
+            </tr>
+            <tr *ngIf="zakazivanje.status=='odbijeno'">
+              <td class="prvaKolona">Razlog odbijanja</td>
+              <td class="drugaKolona">{{zakazivanje.komentar_odbijenica}}</td>
+            </tr>
+            <tr *ngIf="zakazivanje.status != 'odbijeno'">
+              <td class="prvaKolona">Recenzija</td>
+              <td class="drugaKolona" *ngIf="zakazivanje.recenzija.komentar!=''">
+                {{zakazivanje.recenzija.komentar}}
+                <ng-container *ngFor="let _ of [].constructor(zakazivanje.recenzija.ocena); let i = index">
+                  <i class="fa fa-star" style="color: #FFD43B;"></i>
+                </ng-container>
+              </td>
+              <td class="drugaKolona" *ngIf="zakazivanje.recenzija.komentar==''"><i>Jos nije ostavljen komentar</i></td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+      </div>
+    </div>
+    <div class="row tabelarniPrikazRed">
+      <div class="col-md-8 planPoslaKanvas">
+        <div class="canvasContent">
+          <div class="canvasContainer mb-2">
+            <canvas id="mojCanvas" class="canvasStyle"></canvas>
+          </div>
+          <div class="text-center">
+            <i>Skica rasporeda baste koju je priložio vlasnik</i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 raspored-baste-info">
+        <div class="card mb-4" *ngIf="zakazivanje.tip_baste == '1'">
+            <div class="card-body">
+                <h5 class="card-title text-center">Specifikacije bašte</h5>
+                <p class="card-text">Ukupna površina: <strong>{{zakazivanje.uk_povrsina}} m².</strong></p>
+                <p class="card-text">Bazen: <strong>{{zakazivanje.uk_bazen}} m².</strong></p>
+                <p class="card-text">Zelenilo: <strong>{{zakazivanje.uk_zelenilo}} m². </strong></p>
+                <p class="card-text">Ležaljke i stolovi: <strong>{{zakazivanje.uk_namestaj}} m².</strong></p>
+            </div>
+        </div>
+        <div class="card mb-4" *ngIf="zakazivanje.tip_baste == '2'">
+            <div class="card-body">
+                <h5 class="card-title">Specifikacije bašte</h5>
+                <p class="card-text">Ukupna površina: <strong>{{zakazivanje.uk_povrsina}} m². </strong></p>
+                <p class="card-text">Fontana:  <strong>{{zakazivanje.uk_fontana}} m². </strong></p>
+                <p class="card-text">Zelenilo:  <strong>{{zakazivanje.uk_zelenilo}} m².</strong> </p>
+                <p class="card-text">Broj stolova: <strong>{{zakazivanje.br_stolova}}</strong>, broj stolica: <strong>{{zakazivanje.br_stolica}}</strong> stolica.</p>
+            </div>
+        </div>
+      </div>
+      <hr style="margin-top: 20px;">
+    </div>
+    <div class="row tabelarniPrikazRed">
+      <div class="col-sm-12 text-center slikaKartica">
+        <div class="card" style="width: 500px;" *ngIf="zakazivanje.slika!= ''">
+          <img [src]="slikaUrl + zakazivanje.slika" class="card-img-top" alt="...">
+        </div>
+        <div class="" *ngIf="zakazivanje.slika== ''">
+          <i>Ovde ce da bude slika kada je dekorater prilozi.</i>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+</body>
+</html>

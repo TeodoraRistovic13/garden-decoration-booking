@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zakazivanja vlasnika</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <h2 class="logo">Logo</h2>
+    <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto navigation">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/prikaz-profila">Profil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/firme-vlasnik">Firme</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/zakazivanja-vlasnik">Zakazivanja</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/odrzavanje-vlasnik">Odrzavanje</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btnLogin-popup" (click)="izlogujSe()">Izloguj se</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!------------- aktuelna zakazivanja------------->
+    <div class="row aktuelnaZakazivanja">
+      <div class="col naslov">
+        <h4>Aktuelna zakazivanja</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 tekucaZakazivanja table-responsive">
+        <table class="table table-sortable" *ngIf="aktZakazivanja.length!=0">
+          <thead>
+            <tr>
+              <th>RB</th>
+              <th>Datum zakazivanja</th>
+              <th>Datum izrade</th>
+              <th>Firma</th>
+              <th>Usluge</th>
+              <th>Status</th>
+              <th>Akcije</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let z of aktZakazivanja">
+              <td><a class="custom-link text-center" (click)="detaljiZakazivanja(z)">{{ z.id }}</a></td>
+              <td>{{z.datum_zakazivanja | date:'dd.MM.yyyy HH:mm'}}</td>
+              <!-- <td>{{z.datum_izrade | date:'dd.MM.yyyy HH:mm'}} - {{z.datum_zavrsetka | date:'dd.MM.yyyy HH:mm'}}</td> -->
+              <td>{{z.datum_izrade | date:'dd.MM.yyyy HH:mm'}}</td>
+              <td>{{z.firma_naziv}}</td>
+              <td class="usluge">
+                <p *ngFor="let usluga of z.usluge">{{ usluga.naziv }}</p>
+              </td>
+              <td>{{z.status}}</td>
+              <td><button class="btn btn-md" [disabled]="dozvoljenoOtkazivanje(z)==false" (click)="otkaziZakazivanje(z)">Otkaži</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <div *ngIf="aktZakazivanja.length==0" class="text-center">
+          Nemate nijedno aktuelno zakazivanje!
+        </div>
+      </div>
+    </div>
+    <hr/>
+
+    <!------------- arhiva zakazivanja------------->
+    <div class="row arhivaZakazivanja">
+      <div class="col naslov">
+        <h4>Arhiva zakazivanja</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 arhivaZakazivanja table-responsive">
+        <table class="table table-sortable" *ngIf="arhZakazivanja.length!=0" >
+          <thead>
+            <tr>
+              <th>RB</th>
+              <th>Period izrade posla</th>
+              <th>Firma</th>
+              <th>Komentar</th>
+              <th>Ocena</th>
+              <th>Status</th>
+              <th>Akcija</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let z of arhZakazivanja" [class.istekao]="proveraIstekaoPosao(z)&&(z.status=='kreirano'||z.status=='potvrdjeno')">
+              <td><a class="custom-link text-center" (click)="detaljiZakazivanja(z)">{{ z.id }}</a></td>
+              <td *ngIf="z.status!='odbijeno' && z.status !='kreirano' && z.status!='otkazano'">{{z.datum_izrade | date:'dd.MM.yyyy'}} - {{z.datum_zavrsetka | date:'dd.MM.yyyy'}}</td>
+              <td *ngIf="z.status=='odbijeno' || z.status =='kreirano' || z.status =='otkazano'">{{z.datum_izrade | date:'dd.MM.yyyy'}} - / </td>
+              <td>{{z.firma_naziv}}</td>
+              <td *ngIf="z.recenzija.komentar.length!=0">{{z.recenzija.komentar}}</td>
+              <td *ngIf="z.recenzija.komentar.length==0"><i>Nije dodat komentar</i></td>
+              <td *ngIf="z.recenzija.ocena != 0">
+                <ng-container *ngFor="let _ of [].constructor(z.recenzija.ocena); let i = index">
+                  <i class="fa fa-star" style="color: #FFD43B;"></i>
+                </ng-container>
+              </td>
+              <td *ngIf="z.recenzija.ocena == 0"><i>Nije ocenjena</i></td>
+              <td>{{z.status}}</td>
+              <td><button class="btn btn-md" [disabled]="z.recenzija.komentar.length!=0 || !(z.status=='zavrseno' || z.status=='majstor' || z.status =='servisiranje')" (click)="otvoriDialog(z)">Ostavi komentar</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <div *ngIf="arhZakazivanja.length==0" class="text-center">
+          Nemate nijedno arhivirano zakazivanje!
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

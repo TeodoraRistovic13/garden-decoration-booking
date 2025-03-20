@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neautorizovan pristup</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <h2 class="logo">Logo</h2>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav me-auto navigation">
+      </ul>
+      <ul class="navbar-nav">
+        <li>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>Neovlašćen pristup</h1>
+    <p>Nažalost, nemate dovoljne privilegije za pristup ovoj stranici.</p>
+    <p *ngIf="ulogovan.tip=='admin'">Molimo vas da se vratite na <a routerLink="/admin-stranica">početnu stranicu</a> ili kontaktirate <a href="tearistovic1309:support@example.com">podršku</a> ako mislite da je došlo do greške.</p>
+    <p *ngIf="ulogovan.tip=='vlasnik'">Molimo vas da se vratite na <a routerLink="/prikaz-profila">početnu stranicu</a> ili kontaktirate <a href="tearistovic1309:support@example.com">podršku</a> ako mislite da je došlo do greške.</p>
+    <p *ngIf="ulogovan.tip=='dekorater'">Molimo vas da se vratite na <a routerLink="/prikaz-profila">početnu stranicu</a> ili kontaktirate <a href="tearistovic1309:support@example.com">podršku</a> ako mislite da je došlo do greške.</p>
+  </div>
+</body>
+</html>

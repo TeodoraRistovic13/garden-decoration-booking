@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin stranica</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <h2 class="logo">Logo</h2>
+    <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto navigation">
+        <li class="nav-item">
+          <a class="nav-link" (click)="izabranaSekcija = 'vlasnici'">Vlasnici</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="izabranaSekcija = 'dekorateri'">Dekorateri</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="izabranaSekcija = 'firme'">Firme</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="izabranaSekcija = 'zahtevi'">Pristigli zahtevi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/promena-lozinke">Promena lozinke</a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btnLogin-popup" (click)="izlogujSe()">Izloguj se</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mainContainer">
+    <div class="row">
+
+      <!-- pristigli zahtevi -->
+      <div class="services-container" *ngIf="izabranaSekcija=='zahtevi'">
+        <div>
+          <h4 class="text-center naslov">Pristigli zahtevi</h4>
+          <table class="table table-sortable" *ngIf="dohvPristigleZahteve().length!=0;">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Ime i prezime</th>
+                <th>Korisničko ime</th>
+                <th>Pol</th>
+                <th>Adresa</th>
+                <th>Kontakt telefon</th>
+                <th>Email</th>
+                <th>Akcije</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let k of dohvPristigleZahteve(); let i = index;">
+                <td>
+                  <img class="profile-img" [src]="slikaUrl + k.slika" alt="" width="50" height="50">
+                </td>
+                <td>{{ k.ime }} {{ k.prezime }}</td>
+                <td>{{ k.kor_ime }}</td>
+                <td>{{ k.pol }}</td>
+                <td>{{ k.adresa }}</td>
+                <td>{{ k.telefon }}</td>
+                <td>{{ k.imejl }}</td>
+                <td>
+                  <button class="btn btn-md dugme1" (click)="odobriNalog(k)">Prihvati</button>
+                  <button class="btn btn-md" (click)="odbijNalog(k)">Odbij</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div *ngIf="dohvPristigleZahteve().length==0" class="text-center">
+            Trenutno nema novih naloga!
+          </div>
+        </div>
+      </div>
+
+
+      <!-- vlasnici -->
+      <div class="services-container" *ngIf="izabranaSekcija=='vlasnici'">
+        <div>
+          <h4 class="text-center naslov">Vlasnici</h4>
+          <table class="table table-sortable" *ngIf="dohvVlasnike().length!=0;">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Ime i prezime</th>
+                <th>Korisničko ime</th>
+                <th>Pol</th>
+                <th>Adresa</th>
+                <th>Kontakt telefon</th>
+                <th>Email</th>
+                <th>Tip korisnika</th>
+                <th>Akcije</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let k of dohvVlasnike(); let i = index;">
+                <td>
+                  <img class="profile-img" [src]="slikaUrl + k.slika" alt="" width="50" height="50">
+                </td>
+
+                <td><a class="custom-link text-center" (click)="izmeniProfil(k)">{{ k.ime }} {{ k.prezime }}</a></td>
+                <td>{{ k.kor_ime }}</td>
+                <td>{{ k.pol }}</td>
+                <td>{{ k.adresa }}</td>
+                <td>{{ k.telefon }}</td>
+                <td>{{ k.imejl }}</td>
+                <td>{{k.tip}}</td>
+                <td *ngIf="k.status_naloga != 'deaktiviran'">
+                  <button class="btn btn-md dugme1" (click)="deaktivirajNalog(k)">Deaktiviraj</button>
+                </td>
+                <td *ngIf="k.status_naloga == 'deaktiviran'">
+                  <button class="btn btn-md dugme1" (click)="reaktivirajNalog(k)">Reaktiviraj</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div *ngIf="dohvVlasnike().length==0" class="text-center">
+            Trenutno nema novih naloga!
+          </div>
+        </div>
+      </div>
+
+      <!-- dekorateri -->
+      <div class="services-container" *ngIf="izabranaSekcija=='dekorateri'">
+        <div>
+          <h4 class="text-center naslov">Dekorateri</h4>
+          <table class="table table-sortable" *ngIf="dohvDekoratere().length!=0;">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Ime i prezime</th>
+                <th>Korisničko ime</th>
+                <th>Pol</th>
+                <th>Adresa</th>
+                <th>Kontakt telefon</th>
+                <th>Email</th>
+                <th>Firma</th>
+                <th>Akcije</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let k of dohvDekoratere(); let i = index;">
+                <td>
+                  <img class="profile-img" [src]="slikaUrl + k.slika" alt="" width="50" height="50">
+                </td>
+                <td><a class="custom-link text-center" (click)="izmeniProfil(k)">{{ k.ime }} {{ k.prezime }}</a></td>
+                <td>{{ k.kor_ime }}</td>
+                <td>{{ k.pol }}</td>
+                <td>{{ k.adresa }}</td>
+                <td>{{ k.telefon }}</td>
+                <td>{{ k.imejl }}</td>
+                <td *ngIf="k.id_firme != -1">{{dohvNazivFirme(k.id_firme)}}</td>
+                <td *ngIf="k.id_firme == -1"><i>Nije zaposlen jos</i></td>
+                <td *ngIf="k.status_naloga != 'deaktiviran' && k.status_naloga !='blokiran'">
+                  <button class="btn btn-md dugme1" (click)="deaktivirajNalog(k)">Deaktiviraj</button>
+                </td>
+                <td *ngIf="k.status_naloga == 'deaktiviran'">
+                  <button class="btn btn-md dugme1" (click)="reaktivirajNalog(k)">Reaktiviraj</button>
+                </td>
+                <td *ngIf="k.status_naloga == 'blokiran'">
+                  <button class="btn btn-md dugme1" (click)="odblokirajNalog(k)">Odblokiraj</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div *ngIf="dohvDekoratere().length==0" class="text-center">
+            Trenutno nema novih naloga!
+          </div>
+        </div>
+        <hr>
+        <div class="btnDiv">
+          <button class="btn btn-md text-center" routerLink="/dodavanje-dekoratera">Dodaj dekoratera</button>
+        </div>
+      </div>
+
+      <!-- firme -->
+      <div class="services-container firme" *ngIf="izabranaSekcija=='firme'">
+        <div>
+          <h4 class="text-center naslov">Firme</h4>
+
+          <table class="table table-sortable" *ngIf="firme.length!=0;">
+            <thead>
+              <tr>
+                <th>Naziv</th>
+                <th>Adresa </th>
+                <th>Ocena</th>
+                <th>Zvezdice</th>
+                <th>Kontakt osoba</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let f of firme; let i = index;">
+                <td>{{f.naziv}} </td>
+                <td>{{f.adresa}} </td>
+                <td>{{f.prosecna_ocena | number:'1.2-2'}} </td>
+                <td *ngIf="f.prosecna_ocena != 0">
+                  <ng-container *ngFor="let _ of [].constructor(donjiCeoDeo(f.prosecna_ocena)); let i = index">
+                    <i class="fa fa-star" style="color: #FFD43B;"></i>
+                  </ng-container>
+                  <ng-container *ngIf="f.prosecna_ocena % 1 >= 0.5">
+                    <i class="fa fa-star-half-alt" style="color: #FFD43B;"></i>
+                  </ng-container>
+                </td>
+                <td *ngIf="f.prosecna_ocena==0"><i>Nije ocenjena</i></td>
+                <td>{{f.telefon}}</td>
+
+              </tr>
+            </tbody>
+          </table>
+          <div *ngIf="firme.length==0" class="text-center">
+            Nema firmi u sistemu!
+          </div>
+        </div>
+        <hr>
+        <div class="btnDiv">
+          <button class="btn btn-md text-center" routerLink="/dodavanje-firme">Dodajte firmu</button>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+</body>
+</html>

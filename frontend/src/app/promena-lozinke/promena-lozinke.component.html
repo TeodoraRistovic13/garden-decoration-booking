@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promena lozinke</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+  <header *ngIf="ulogovan.tip=='vlasnik'">
+    <h2 class="logo">Logo</h2>
+    <nav class="navigation">
+      <a routerLink="/prikaz-profila">Profil</a>
+      <a routerLink="/firme-vlasnik">Firme</a>
+      <a routerLink="/zakazivanja-vlasnik">Zakazivanja</a>
+      <a routerLink="/odrzavanje-vlasnik">Odrzavanje</a>
+      <button class="btnLogin-popup" (click)="izlogujSe(ulogovan.tip)">Izloguj se</button>
+    </nav>
+  </header>
+
+  <header *ngIf="ulogovan.tip=='dekorater'">
+    <h2 class="logo">Logo</h2>
+    <nav class="navigation">
+      <a routerLink="/prikaz-profila">Profil</a>
+      <a routerLink="/zakazivanja-dekorater">Zakazivanja</a>
+      <a routerLink="/odrzavanja-dekorater">Odrzavanja</a>
+      <a routerLink="/statistika-dekorater">Statistika</a>
+      <button class="btnLogin-popup" (click)="izlogujSe(ulogovan.tip)">Izloguj se</button>
+    </nav>
+  </header>
+
+  <header *ngIf="ulogovan.tip=='admin'">
+    <h2 class="logo">Logo</h2>
+    <nav class="navigation">
+      <a routerLink="/admin-stranica">Pocetna</a>
+      <button class="btnLogin-popup" (click)="izlogujSe(ulogovan.tip)">Izloguj se</button>
+    </nav>
+  </header>
+
+  <div class="box">
+    <div class="wrapper">
+      <form action="">
+        <h1>Promena lozinke</h1>
+        <div class="input-box">
+          <input [type]="tipPoljaZaLozinku1" placeholder="Stara lozinka" required [(ngModel)]="staraLozinka" autocomplete="new-password" name="lozinka">
+          <i class='bx' [ngClass]="tipPoljaZaLozinku1 === 'password' ? 'bx-hide' : 'bx-show'" (click)="tipPoljaZaLozinku1 = tipPoljaZaLozinku1 === 'password' ? 'text' : 'password';"></i>
+        </div>
+        <div class="input-box">
+          <input [type]="tipPoljaZaLozinku2" placeholder="Nova lozinka" required [(ngModel)]="novaLozinka" autocomplete="new-password" name="lozinka">
+          <i class='bx' [ngClass]="tipPoljaZaLozinku2 === 'password' ? 'bx-hide' : 'bx-show'" (click)="tipPoljaZaLozinku2 = tipPoljaZaLozinku2 === 'password' ? 'text' : 'password';"></i>
+        </div>
+        <div class="input-box">
+          <input [type]="tipPoljaZaLozinku3" placeholder="Ponovljena lozinka" required [(ngModel)]="ponovljenaNova" autocomplete="new-password" name="lozinka">
+          <i class='bx' [ngClass]="tipPoljaZaLozinku3 === 'password' ? 'bx-hide' : 'bx-show'" (click)="tipPoljaZaLozinku3 = tipPoljaZaLozinku3 === 'password' ? 'text' : 'password';"></i>
+        </div>
+        <button type="submit" class="btn" (click)="promeniLozinku()">Promeni lozinku</button>
+      </form>
+    </div>
+  </div>
+
+
+
+</body>
+</html>
+

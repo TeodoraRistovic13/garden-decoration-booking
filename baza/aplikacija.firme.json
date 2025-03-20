@@ -1,0 +1,190 @@
+[{
+  "_id": {
+    "$oid": "66d086cc77402a8beeba364e"
+  },
+  "id": 1,
+  "naziv": "BastaLux",
+  "adresa": "Gundulicev venac 13, Beograd",
+  "prosecna_ocena": 5,
+  "telefon": "064/567-890",
+  "usluge": [
+    {
+      "naziv": "Dekorisanje privatnih bašta",
+      "opis": "Kreiramo hramoniju u vašem dvorištu uz pomoć stručnog tima dizajnera.",
+      "cena": "7500"
+    },
+    {
+      "naziv": "Dekorisanje restoranskih bašta",
+      "opis": "Prilagođavamo eksterijere vašeg restorana kako bi se uklopili u ambijent i atmosferu.",
+      "cena": "9000"
+    }
+  ],
+  "radno_vreme_od": "08:00",
+  "radno_vreme_do": "16:00",
+  "datum_pocetka_godisnjeg": "2024-07-10T00:00:00.000+00:00",
+  "datum_kraja_godisnjeg": "2024-07-20T00:00:00.000+00:00"
+},
+{
+  "_id": {
+    "$oid": "66d086cc77402a8beeba364f"
+  },
+  "id": 2,
+  "naziv": "GardenArt",
+  "adresa": "Cara Dušana 45, Niš",
+  "prosecna_ocena": 4,
+  "telefon": "061/789-123",
+  "usluge": [
+    {
+      "naziv": "Dekorisanje bašta za specijalne događaje",
+      "opis": "Svadbe, rođendani ili drugi posebni događaji u bajkovitom okruženju.",
+      "cena": "11000"
+    },
+    {
+      "naziv": "Uređenje tematskih bašta",
+      "opis": "Tematsko uređenje bašti po vašoj želji, uključujući stilizaciju i odabir elemenata.",
+      "cena": "9500"
+    }
+  ],
+  "radno_vreme_od": "09:00",
+  "radno_vreme_do": "17:00",
+  "datum_pocetka_godisnjeg": "2024-08-01T00:00:00.000+00:00",
+  "datum_kraja_godisnjeg": "2024-08-15T00:00:00.000+00:00"
+},
+{
+  "_id": {
+    "$oid": "66d086cc77402a8beeba3650"
+  },
+  "id": 3,
+  "naziv": "EleganceGardens",
+  "adresa": "Vojvode Stepe 10, Beograd",
+  "prosecna_ocena": 4,
+  "telefon": "063/234-5678",
+  "usluge": [
+    {
+      "naziv": "Dekorisanje restoranskih bašta",
+      "opis": "Elegantna i sofisticirana rešenja za uređenje vaših restoranskih bašta.",
+      "cena": "8800"
+    },
+    {
+      "naziv": "Sezonsko uređenje privatnih bašta",
+      "opis": "Sezonsko uređenje i dekoracija privatnih bašta u skladu sa vašim preferencijama.",
+      "cena": "7200"
+    }
+  ],
+  "radno_vreme_od": "10:00",
+  "radno_vreme_do": "18:00",
+  "datum_pocetka_godisnjeg": "2024-09-05T00:00:00.000+00:00",
+  "datum_kraja_godisnjeg": "2024-09-20T00:00:00.000+00:00"
+},
+{
+  "_id": {
+    "$oid": "66d086cc77402a8beeba3651"
+  },
+  "id": 4,
+  "naziv": "EcoDecor",
+  "adresa": "Trg Slobode 18, Novi Sad",
+  "prosecna_ocena": 0,
+  "telefon": "062/321-654",
+  "usluge": [
+    {
+      "naziv": "Dekorisanje restoranskih bašta",
+      "opis": "Ekološki osvešćeni pristup uređenju bašti sa naglaskom na prirodne materijale.",
+      "cena": "9400"
+    },
+    {
+      "naziv": "Održavanje eksterijera",
+      "opis": "Redovno održavanje i osvežavanje baštenskih prostora.",
+      "cena": "6000"
+    }
+  ],
+  "radno_vreme_od": "07:00",
+  "radno_vreme_do": "15:00",
+  "datum_pocetka_godisnjeg": "2024-07-25T00:00:00.000+00:00",
+  "datum_kraja_godisnjeg": "2024-08-05T00:00:00.000+00:00"
+},
+{
+  "_id": {
+    "$oid": "66d086cc77402a8beeba3652"
+  },
+  "id": 5,
+  "naziv": "ArtisticYards",
+  "adresa": "Nikole Tesle 5, Zrenjanin",
+  "prosecna_ocena": 0,
+  "telefon": "063/456-789",
+  "usluge": [
+    {
+      "naziv": "Dekorisanje privatnih bašta",
+      "opis": "Unikatna umetnička rešenja za vašu baštu, od skulptura do vrtnih instalacija.",
+      "cena": "10500"
+    },
+    {
+      "naziv": "Tematsko uređenje bašti",
+      "opis": "Personalizovano tematsko uređenje bašti za posebne prilike.",
+      "cena": "10000"
+    }
+  ],
+  "radno_vreme_od": "08:00",
+  "radno_vreme_do": "16:00",
+  "datum_pocetka_godisnjeg": "2024-08-10T00:00:00.000+00:00",
+  "datum_kraja_godisnjeg": "2024-08-20T00:00:00.000+00:00"
+},
+{
+  "_id": {
+    "$oid": "66d086cc77402a8beeba3653"
+  },
+  "id": 6,
+  "naziv": "VasDizajn",
+  "adresa": "Bulevar kralja Aleksandra 77, Beograd",
+  "prosecna_ocena": 0,
+  "telefon": "064/894-173",
+  "usluge": [
+    {
+      "naziv": "Dekorisanje restoranih basta",
+      "opis": "Dekorisemo restoranske  eksterijere sa ili bez vodenih povrsina.",
+      "cena": "8000"
+    }
+  ],
+  "datum_pocetka_godisnjeg": {
+    "$date": "2024-09-25T12:00:00.000Z"
+  },
+  "datum_kraja_godisnjeg": {
+    "$date": "2024-10-05T00:00:00.000Z"
+  },
+  "radno_vreme_do": "15:00",
+  "radno_vreme_od": "09:00"
+},
+{
+  "_id": {
+    "$oid": "66d086cc77402a8beeba3654"
+  },
+  "id": 7,
+  "naziv": "Tea'SDesigns",
+  "adresa": "Branka Krsmanovica 24, Beograd",
+  "prosecna_ocena": 4.5,
+  "telefon": "063/535-868",
+  "usluge": [
+    {
+      "naziv": "Dekorisanje restoranski basta",
+      "opis": "Dekorisemo restoranske baste po dogvoru sa Vama.",
+      "cena": "8000"
+    },
+    {
+      "naziv": "Dekorisanje privatnih basta",
+      "opis": "Dekorisemo privatne baste po dogvoru sa Vama.",
+      "cena": "5000"
+    },
+    {
+      "naziv": "Dekorisanje baste za specijalne dogadjaje (rodjendanske proslave, krstenje, svadbe,...)",
+      "opis": "Dozvolite nasim vrsnim dekoraterima da ucine vase lepe dane jos lepsim!",
+      "cena": "7000"
+    }
+  ],
+  "datum_pocetka_godisnjeg": {
+    "$date": "2024-09-10T00:00:00.000Z"
+  },
+  "datum_kraja_godisnjeg": {
+    "$date": "2024-09-20T00:00:00.000Z"
+  },
+  "radno_vreme_od": "09:00",
+  "radno_vreme_do": "17:00"
+}]

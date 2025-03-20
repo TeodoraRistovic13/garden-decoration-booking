@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Statistika</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <h2 class="logo">Logo</h2>
+    <button class="navbar-toggler" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto navigation">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/prikaz-profila">Profil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/zakazivanja-dekorater">Zakazivanja</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/odrzavanja-dekorater">Odrzavanja</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/statistika-dekorater">Statistika</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="btnLogin-popup" (click)="izlogujSe()">Izloguj se</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mainContainer">
+
+    <div class="row prviRed">
+      <div class="col-md-12 col-lg-5 card histogramCard">
+        <div class="card-header">
+          Prosecan mesecni broj poslova u poslednje dve godine po danima u nedelji
+        </div>
+        <div class="card-body" *ngIf="histogramData.length!= 0">
+          <ngx-charts-bar-vertical
+          [results]="histogramData"
+          [view]="[400, 200]"
+          [xAxis]="true"
+          [yAxis]="true"
+          [legend]="false"
+          [showXAxisLabel]="false"
+          [showYAxisLabel]="false"
+          [xAxisLabel]="'Dan u nedelji'"
+          [yAxisLabel]="'Prosecan broj poslova'">
+        </ngx-charts-bar-vertical>
+        </div>
+        <div class="card-body" *ngIf="histogramData.length==0">
+          <p>Nema podataka!</p>
+        </div>
+      </div>
+
+
+
+      <div class="col-md-12 col-lg-6 card">
+        <div class="card-header">
+          Raspodela poslova u firmi
+        </div>
+        <div class="card-body" *ngIf="pieChartData.length!=0">
+          <ngx-charts-pie-chart
+            [results]="pieChartData"
+            [legend]="true"
+            [labels]="true"
+            >
+          </ngx-charts-pie-chart>
+        </div>
+        <div class="card-body" *ngIf="pieChartData.length==0">
+          <p>Nema podataka!</p>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-12 col-lg-11 card">
+        <div class="card-header">
+          Broj mojih poslova po mesecima
+        </div>
+        <div class="card-body histogram" *ngIf="barChartData.length!=0">
+
+          <ngx-charts-bar-vertical
+            [results]="barChartData"
+            [view]="[500, 250]"
+            [xAxis]="true"
+            [yAxis]="true"
+            [yAxisTickFormatting]="formatYAxis"
+            [legend]="false"
+            [legendPosition]=below
+            [showXAxisLabel]="false"
+            [showYAxisLabel]="false"
+            [rotateXAxisTicks] ="true"
+            [noBarWhenZero] ="true"
+            [roundEdges] = "true"
+            [xAxisLabel]="'Mesec'"
+            [animations] = "true"
+            [yAxisLabel]="'Broj poslova'">
+          </ngx-charts-bar-vertical>
+
+        </div>
+        <div class="card-body" *ngIf="barChartData.length==0">
+          <p>Nema dostupnih podataka!</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
