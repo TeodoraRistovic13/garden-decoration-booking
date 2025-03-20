@@ -1,7 +1,9 @@
 import axios from 'axios';
+import dotenv from 'dotenv';
 
+dotenv.config(); // Učitaj varijable iz .env fajla
 
-const secretKey = '6Lc9JTQqAAAAAK3nG46H2SHCZWDeDvURAaPj5VJI'; 
+export const secretKey = process.env.SECRET_KEY; 
 
 
 export function verifyRecaptcha(responseToken: any): Promise<boolean> {
