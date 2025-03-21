@@ -6,6 +6,7 @@ A complete web application for scheduling garden decoration services offered by 
 
 - **Dynamic Company Locations on Map**: Displays company locations using **Leaflet** and **Axios**.
 - **User Verification**: Includes **ngx-captcha** for ensuring users are not robots when registering a new account.
+- **Upload images**: Uses **multer** to upload images to server.
 - **Garden Layout Upload**: Allows users to upload garden layouts through a **JSON file** or draw on a **Canvas element**.
 - **Statistics & Graphs**: Display various statistical data in charts using **ngx-charts** (swimlane).
 - **Elegant User Interface**: Designed with focus on a visually appealing and intuitive frontend.
@@ -22,12 +23,6 @@ A complete web application for scheduling garden decoration services offered by 
 2. **Job Acceptance**: Decorators log in to their accounts, view pending jobs, and accept or decline them.
 3. **Job Completion**: After the job is completed, the garden owner can request follow-up services in the future.
 4. **Statistics**: All employees can view company statistics.
-
-## Technologies Used
-
-- **Frontend**: Angular, ngx-captcha, Leaflet, ngx-charts, Bootstrap
-- **Backend**: Node.js, Express, MongoDB
-- **Other Libraries**: Axios for API calls
 
 ## Setup Instructions
 
